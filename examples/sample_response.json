@@ -1,0 +1,27 @@
+{
+    "job_id": "123e4567-e89b-12d3-a456-426614174000",
+    "status": "completed",
+    "progress": 100,
+    "results": {
+        "insights": [
+            "Video content performs 3x better than static images for Gen Z.",
+            "Email open rates are highest on Tuesday mornings."
+        ],
+        "recommendations": [
+            "Reallocate 15% of budget from Email to TikTok.",
+            "Launch a user-generated content contest on Instagram."
+        ],
+        "segments": [
+            {
+                "name": "High-Value Millennials",
+                "size": 25000,
+                "preferred_channel": "Instagram"
+            },
+            {
+                "name": "Impulse Buyers Gen Z",
+                "size": 40000,
+                "preferred_channel": "TikTok"
+            }
+        ]
+    }
+}
