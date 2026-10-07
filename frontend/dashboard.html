@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Dashboard — MarketPilot AI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .campaign-selector-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 12px 20px;
+            margin-bottom: 20px;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .running-banner {
+            display: none;
+            background: linear-gradient(135deg, rgba(67, 97, 238, 0.15), rgba(123, 44, 191, 0.15));
+            border: 1px solid var(--accent);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            margin-bottom: 20px;
+            animation: pulseBanner 2s infinite ease-in-out;
+        }
+        @keyframes pulseBanner {
+            0% { box-shadow: 0 0 0 0 rgba(67, 97, 238, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(67, 97, 238, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(67, 97, 238, 0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar Navigation (Full 14-Page Architecture) -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span style="font-size: 1.7rem;">✈️</span>
+                <div>
+                    <div class="sidebar-logo">MarketPilot AI</div>
+                    <div class="sidebar-subtitle">Agentic Automation</div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Core Operations</div>
+                    <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span> Home</a>
+                    <a href="dashboard.html" class="nav-item active"><span class="nav-icon">📊</span> Dashboard</a>
+                    <a href="campaign.html" class="nav-item"><span class="nav-icon">🎯</span> New Campaign</a>
+                    <a href="upload.html" class="nav-item"><span class="nav-icon">📤</span> Upload Data</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Swarm Observability</div>
+                    <a href="agents.html" class="nav-item"><span class="nav-icon">🤖</span> Agent Swarm</a>
+                    <a href="insights.html" class="nav-item"><span class="nav-icon">💡</span> Customer Voice</a>
+                    <a href="segments.html" class="nav-item"><span class="nav-icon">👥</span> Segmentation</a>
+                    <a href="journey.html" class="nav-item"><span class="nav-icon">🔄</span> Journey Funnel</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Decision Engine</div>
+                    <a href="optimization.html" class="nav-item"><span class="nav-icon">⚡</span> Optimization</a>
+                    <a href="budget.html" class="nav-item"><span class="nav-icon">💰</span> Budget Allocation</a>
+                    <a href="scenarios.html" class="nav-item"><span class="nav-icon">🔮</span> Scenario Simulator</a>
+                    <a href="recommendations.html" class="nav-item"><span class="nav-icon">✍️</span> Human Review</a>
+                    <a href="rag.html" class="nav-item"><span class="nav-icon">📚</span> RAG Explorer</a>
+                    <a href="reports.html" class="nav-item"><span class="nav-icon">📋</span> Executive Brief</a>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn btn-ghost btn-sm" onclick="toggleTheme()" style="width:100%; display:flex; justify-content:center; gap:8px;">
+                    <span class="theme-toggle">☀️</span> Toggle Theme
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Controls & Campaign Switcher -->
+            <div class="campaign-selector-bar">
+                <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+                    <div>
+                        <span style="font-size:11px; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Active Campaign</span>
+                        <div style="display:flex; align-items:center; gap:8px;">
+                            <strong id="active-brand-name" style="font-size:16px; color:var(--text-heading);">MarketPilot Campaign</strong>
+                            <span style="color:var(--text-muted);">&bull;</span>
+                            <span id="active-campaign-name" style="color:var(--text-secondary); font-size:14px;">Autonomous Optimization</span>
+                            <span id="active-status-badge" class="badge badge-success">COMPLETED</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+                    <div style="display:flex; align-items:center; gap:8px;">
+                        <span style="font-size:12px; color:var(--text-muted);">Switch:</span>
+                        <select id="campaign-switcher" class="form-control" style="font-size:13px; padding:6px 12px; width:auto; max-width:280px;" onchange="handleSwitchCampaign(this.value)">
+                            <option value="">Loading campaigns...</option>
+                        </select>
+                    </div>
+                    <a href="campaign.html" class="btn btn-primary btn-sm">➕ New Campaign</a>
+                    <button class="btn btn-secondary btn-sm" onclick="startDemo()">⚡ Demo Mode</button>
+                    <a id="btn-export-brief" href="reports.html" class="btn btn-ghost btn-sm">📋 Report</a>
+                </div>
+            </div>
+
+            <!-- Running Analysis Live Banner (Displays while agents work) -->
+            <div id="running-analysis-banner" class="running-banner">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        <span style="font-size:20px;">🤖</span>
+                        <strong id="running-status-text" style="color:var(--accent-light);">Autonomous Multi-Agent Swarm running...</strong>
+                    </div>
+                    <span class="badge badge-info">Live Execution</span>
+                </div>
+                <div class="progress-bar-container" style="background:rgba(255,255,255,0.1); height:8px; border-radius:4px; overflow:hidden;">
+                    <div id="running-progress-fill" style="width:40%; height:100%; background:linear-gradient(90deg, var(--accent), var(--purple)); transition:width 0.4s ease;"></div>
+                </div>
+            </div>
+
+            <!-- Empty State when no jobs exist -->
+            <div id="dashboard-empty" class="card" style="display:none; text-align:center; padding:60px 20px; margin-top:20px;">
+                <div style="font-size:48px; margin-bottom:16px;">📊</div>
+                <h2 style="margin-bottom:8px; color:var(--text-heading);">No Campaign Analysis Found</h2>
+                <p style="color:var(--text-secondary); max-width:500px; margin:0 auto 24px auto;">
+                    Create a new custom marketing campaign with automatic entity normalization, or launch the academic Coca-Cola demo to explore all multi-agent capabilities.
+                </p>
+                <div style="display:flex; gap:16px; justify-content:center;">
+                    <a href="campaign.html" class="btn btn-primary">🎯 Create New Campaign</a>
+                    <button class="btn btn-secondary" onclick="startDemo()">🚀 Launch Academic Demo</button>
+                </div>
+            </div>
+
+            <!-- Dynamic Dashboard Content -->
+            <div id="dashboard-content">
+                <!-- KPI Stats Grid (6 Critical Metrics) -->
+                <div class="stats-grid mb-4">
+                    <div class="metric-card" id="kpi-roas">
+                        <div class="metric-label">Predicted Blended ROAS</div>
+                        <div class="metric-value">--</div>
+                        <div class="metric-change">--</div>
+                    </div>
+                    <div class="metric-card" id="kpi-cpa">
+                        <div class="metric-label">Estimated CPA</div>
+                        <div class="metric-value">--</div>
+                        <div class="metric-change">--</div>
+                    </div>
+                    <div class="metric-card" id="kpi-conversions">
+                        <div class="metric-label">Forecasted Conversions</div>
+                        <div class="metric-value">--</div>
+                        <div class="metric-change">--</div>
+                    </div>
+                    <div class="metric-card" id="kpi-sentiment">
+                        <div class="metric-label">Customer Sentiment</div>
+                        <div class="metric-value">--</div>
+                        <div class="metric-change">--</div>
+                    </div>
+                    <div class="metric-card" id="kpi-health">
+                        <div class="metric-label">Quality & Governance</div>
+                        <div class="metric-value">--</div>
+                        <div class="metric-change">--</div>
+                    </div>
+                    <div class="metric-card" id="kpi-quality">
+                        <div class="metric-label">Data Quality Score</div>
+                        <div class="metric-value">--</div>
+                        <div class="metric-change">--</div>
+                    </div>
+                </div>
+
+                <!-- 2x2 Interactive Charts Grid -->
+                <div class="grid-2 mt-4" style="margin-top: 24px; gap: 20px;">
+                    <div class="chart-card card">
+                        <div class="card-header" style="display:flex; justify-content:space-between; align-items:center;">
+                            <h3 class="card-title">📈 Channel Performance (ROAS)</h3>
+                            <a href="budget.html" class="btn btn-ghost btn-sm">Deep Dive &rarr;</a>
+                        </div>
+                        <div class="chart-container" style="position:relative; height:260px;">
+                            <canvas id="chart-channel"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-card card">
+                        <div class="card-header" style="display:flex; justify-content:space-between; align-items:center;">
+                            <h3 class="card-title">🗣️ Customer Voice Sentiment</h3>
+                            <a href="insights.html" class="btn btn-ghost btn-sm">Customer Voice &rarr;</a>
+                        </div>
+                        <div class="chart-container" style="position:relative; height:260px;">
+                            <canvas id="chart-sentiment"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-card card">
+                        <div class="card-header" style="display:flex; justify-content:space-between; align-items:center;">
+                            <h3 class="card-title">🔄 User Journey Funnel</h3>
+                            <a href="journey.html" class="btn btn-ghost btn-sm">Funnel Leak Analysis &rarr;</a>
+                        </div>
+                        <div class="chart-container" style="position:relative; height:260px;">
+                            <canvas id="chart-funnel"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-card card">
+                        <div class="card-header" style="display:flex; justify-content:space-between; align-items:center;">
+                            <h3 class="card-title">💰 Optimized Budget Allocation</h3>
+                            <a href="scenarios.html" class="btn btn-ghost btn-sm">Simulate &rarr;</a>
+                        </div>
+                        <div class="chart-container" style="position:relative; height:260px;">
+                            <canvas id="chart-budget"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Agent Execution Trace -->
+                <div class="card mt-4" style="margin-top: 24px;">
+                    <div class="card-header" style="display:flex; justify-content:space-between; align-items:center;">
+                        <div>
+                            <h3 class="card-title">🤖 Multi-Agent Swarm Observability</h3>
+                            <div style="font-size:12px; color:var(--text-muted); margin-top:2px;">
+                                Active Job ID: <span id="active-job-id" style="font-family:monospace; color:var(--accent-light);">--</span>
+                            </div>
+                        </div>
+                        <a href="agents.html" class="btn btn-ghost btn-sm">Full Telemetry &rarr;</a>
+                    </div>
+                    <div class="card-body" id="agent-execution-summary" style="padding:16px 20px;">
+                        <div class="text-center" style="padding: 20px; color: var(--text-muted);">Loading agent execution trace...</div>
+                    </div>
+                </div>
+
+                <!-- Strategic AI Recommendations with Human-in-the-Loop Controls -->
+                <div class="card mt-4" style="margin-top: 24px;">
+                    <div class="card-header" style="display:flex; justify-content:space-between; align-items:center;">
+                        <div>
+                            <h3 class="card-title">⚡ High-Impact Optimization Directives</h3>
+                            <div style="font-size:12px; color:var(--text-muted);">Generated by Optimization Agent grounded in RAG Marketing Frameworks</div>
+                        </div>
+                        <a href="optimization.html" class="btn btn-ghost btn-sm">Full Evidence &rarr;</a>
+                    </div>
+                    <div class="card-body">
+                        <div id="recommendations-container">
+                            <div style="padding: 20px; text-align:center; color:var(--text-muted);">Loading recommendations...</div>
+                        </div>
+                        <div class="card-footer" style="padding-top:16px; border:none; display:flex; justify-content:flex-end; gap:12px;">
+                            <button class="btn btn-ghost" onclick="requestRevision()">✏️ Request Agent Revision</button>
+                            <button id="approve-n8n-btn" class="btn btn-primary approval-btn" onclick="approveRecommendations()">✅ Approve & Dispatch to n8n Cloud</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

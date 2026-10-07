@@ -1,0 +1,261 @@
+journey_id,customer_id,timestamp,stage,channel,action,duration_seconds,converted,drop_off,session_id,device,campaign_name
+JRN_0,CUST_113,2026-01-17T23:00:00,,YouTube,add_to_cart,123,False,False,SESS_7699,desktop,Coca-Cola Share a Coke Gen Z
+JRN_1,CUST_246,2026-03-20T23:00:00,,Instagram,ad_view,415,True,False,SESS_4171,mobile,Coca-Cola Share a Coke Gen Z
+JRN_2,CUST_289,2026-01-05T00:00:00,,Facebook,add_to_cart,310,True,True,SESS_8870,tablet,Coca-Cola Share a Coke Gen Z
+JRN_3,CUST_55,2026-03-03T15:00:00,consideration,Snapchat,share,-256,True,True,SESS_5308,desktop,Coca-Cola Share a Coke Gen Z
+JRN_4,CUST_301,2026-03-20T06:00:00,interest,Snapchat,purchase,-211,True,True,SESS_3554,desktop,Coca-Cola Share a Coke Gen Z
+JRN_5,CUST_189,2026-02-22T21:00:00,interest,Google Ads,page_visit,169,False,True,SESS_3238,tablet,Coca-Cola Share a Coke Gen Z
+JRN_6,CUST_220,2026-03-16T17:00:00,awareness,Instagram,page_visit,334,True,False,SESS_9267,mobile,Coca-Cola Share a Coke Gen Z
+JRN_7,CUST_103,2026-03-09T07:00:00,consideration,Google Ads,share,36,False,False,SESS_6059,mobile,Coca-Cola Share a Coke Gen Z
+JRN_8,CUST_22,2026-01-23T17:00:00,evaluation,Snapchat,share,278,True,True,SESS_2133,mobile,Coca-Cola Share a Coke Gen Z
+JRN_9,CUST_116,2026-01-13T21:00:00,awareness,Snapchat,review,327,True,True,SESS_2546,desktop,Coca-Cola Share a Coke Gen Z
+JRN_10,CUST_60,2026-02-09T20:00:00,intent,Instagram,share,137,False,True,SESS_2208,tablet,Coca-Cola Share a Coke Gen Z
+JRN_11,CUST_94,2026-01-03T06:00:00,interest,Facebook,purchase,351,True,True,SESS_8739,desktop,Coca-Cola Share a Coke Gen Z
+JRN_12,CUST_15,2026-01-30T03:00:00,purchase,Snapchat,ad_view,123,False,True,SESS_5817,mobile,Coca-Cola Share a Coke Gen Z
+JRN_13,CUST_288,2026-01-05T18:00:00,intent,Instagram,product_view,583,False,True,SESS_9357,mobile,Coca-Cola Share a Coke Gen Z
+JRN_14,CUST_128,2026-02-04T16:00:00,purchase,Twitter,checkout_start,371,True,False,SESS_9643,desktop,Coca-Cola Share a Coke Gen Z
+JRN_15,CUST_124,2026-01-21T09:00:00,intent,Google Ads,review,469,False,False,SESS_7949,desktop,Coca-Cola Share a Coke Gen Z
+JRN_16,CUST_280,2026-03-05T21:00:00,consideration,Google Ads,share,329,False,True,SESS_5541,desktop,Coca-Cola Share a Coke Gen Z
+JRN_17,CUST_90,2026-01-24T10:00:00,purchase,YouTube,share,383,True,False,SESS_3811,mobile,Coca-Cola Share a Coke Gen Z
+JRN_18,CUST_117,2026-01-27T02:00:00,consideration,Influencer,product_view,34,False,False,SESS_2082,mobile,Coca-Cola Share a Coke Gen Z
+JRN_19,CUST_69,2026-03-07T07:00:00,intent,Snapchat,add_to_cart,215,True,False,SESS_3692,tablet,Coca-Cola Share a Coke Gen Z
+JRN_20,CUST_22,2026-03-13T12:00:00,consideration,YouTube,purchase,444,True,False,SESS_9953,mobile,Coca-Cola Share a Coke Gen Z
+JRN_21,CUST_128,2026-02-17T22:00:00,intent,Google Ads,page_visit,270,False,True,SESS_5463,tablet,Coca-Cola Share a Coke Gen Z
+JRN_22,CUST_266,2026-02-21T15:00:00,purchase,Google Ads,product_view,330,False,False,SESS_8636,mobile,Coca-Cola Share a Coke Gen Z
+JRN_23,CUST_12,2026-01-10T16:00:00,retention,Twitter,product_view,288,False,False,SESS_9051,desktop,Coca-Cola Share a Coke Gen Z
+JRN_24,CUST_47,2026-03-15T07:00:00,consideration,Instagram,review,504,False,True,SESS_2756,desktop,Coca-Cola Share a Coke Gen Z
+JRN_25,CUST_255,2026-01-06T22:00:00,interest,Google Ads,ad_view,60,True,True,SESS_4471,mobile,Coca-Cola Share a Coke Gen Z
+JRN_26,CUST_70,2026-01-11T23:00:00,retention,Google Ads,return_visit,174,True,False,SESS_4035,desktop,Coca-Cola Share a Coke Gen Z
+JRN_27,CUST_251,2026-03-14T14:00:00,consideration,Facebook,purchase,244,True,True,SESS_4435,mobile,Coca-Cola Share a Coke Gen Z
+JRN_28,CUST_179,2026-03-15T22:00:00,retention,Google Ads,add_to_cart,147,True,False,SESS_8107,mobile,Coca-Cola Share a Coke Gen Z
+JRN_29,CUST_31,2026-03-18T16:00:00,awareness,YouTube,product_view,178,True,False,SESS_7549,desktop,Coca-Cola Share a Coke Gen Z
+JRN_30,CUST_126,2026-01-13T20:00:00,awareness,Twitter,return_visit,548,False,True,SESS_6715,mobile,Coca-Cola Share a Coke Gen Z
+JRN_31,CUST_252,2026-02-01T22:00:00,awareness,Facebook,product_view,518,False,False,SESS_9006,tablet,Coca-Cola Share a Coke Gen Z
+JRN_32,CUST_28,2026-01-14T00:00:00,intent,Facebook,review,142,False,True,SESS_7923,desktop,Coca-Cola Share a Coke Gen Z
+JRN_33,CUST_51,2026-02-27T13:00:00,purchase,Instagram,return_visit,298,False,True,SESS_4075,desktop,Coca-Cola Share a Coke Gen Z
+JRN_34,CUST_77,2026-02-09T19:00:00,consideration,Snapchat,share,190,False,True,SESS_9502,tablet,Coca-Cola Share a Coke Gen Z
+JRN_35,CUST_137,2026-01-31T15:00:00,retention,Twitter,page_visit,557,True,False,SESS_1594,tablet,Coca-Cola Share a Coke Gen Z
+JRN_36,CUST_307,2026-01-13T06:00:00,intent,Google Ads,page_visit,574,True,True,SESS_6011,mobile,Coca-Cola Share a Coke Gen Z
+JRN_37,CUST_249,2026-03-04T22:00:00,consideration,YouTube,checkout_start,571,False,True,SESS_2930,tablet,Coca-Cola Share a Coke Gen Z
+JRN_38,CUST_166,2026-01-01T12:00:00,interest,Influencer,page_visit,552,True,False,SESS_5250,mobile,Coca-Cola Share a Coke Gen Z
+JRN_39,CUST_16,2026-02-20T16:00:00,awareness,Influencer,purchase,67,False,True,SESS_2447,mobile,Coca-Cola Share a Coke Gen Z
+JRN_40,CUST_186,2026-03-18T02:00:00,awareness,Twitter,review,371,False,True,SESS_1936,tablet,Coca-Cola Share a Coke Gen Z
+JRN_41,CUST_29,2026-01-02T12:00:00,awareness,Google Ads,add_to_cart,81,False,False,SESS_7145,desktop,Coca-Cola Share a Coke Gen Z
+JRN_42,CUST_44,2026-03-14T16:00:00,interest,Google Ads,product_view,177,False,True,SESS_9039,tablet,Coca-Cola Share a Coke Gen Z
+JRN_43,CUST_254,2026-03-23T04:00:00,evaluation,Google Ads,return_visit,576,False,False,SESS_3706,tablet,Coca-Cola Share a Coke Gen Z
+JRN_44,CUST_255,2026-02-27T06:00:00,awareness,Twitter,review,541,False,True,SESS_8065,desktop,Coca-Cola Share a Coke Gen Z
+JRN_45,CUST_160,2026-03-13T12:00:00,retention,Instagram,checkout_start,122,False,False,SESS_7158,mobile,Coca-Cola Share a Coke Gen Z
+JRN_46,CUST_109,2026-03-19T21:00:00,purchase,Facebook,purchase,586,True,True,SESS_5063,desktop,Coca-Cola Share a Coke Gen Z
+JRN_47,CUST_118,2026-02-11T04:00:00,interest,YouTube,checkout_start,332,True,False,SESS_5640,mobile,Coca-Cola Share a Coke Gen Z
+JRN_48,CUST_259,2026-02-18T10:00:00,purchase,Facebook,checkout_start,459,True,False,SESS_2023,mobile,Coca-Cola Share a Coke Gen Z
+JRN_49,CUST_195,2026-03-02T16:00:00,consideration,Influencer,ad_view,399,False,True,SESS_7118,tablet,Coca-Cola Share a Coke Gen Z
+JRN_50,CUST_97,2026-02-15T17:00:00,retention,Twitter,checkout_start,17,False,False,SESS_6199,tablet,Coca-Cola Share a Coke Gen Z
+JRN_51,CUST_188,2026-03-16T16:00:00,consideration,Twitter,checkout_start,121,True,False,SESS_7881,mobile,Coca-Cola Share a Coke Gen Z
+JRN_52,CUST_71,2026-01-25T12:00:00,intent,Google Ads,page_visit,211,False,False,SESS_3818,desktop,Coca-Cola Share a Coke Gen Z
+JRN_53,CUST_143,2026-02-07T18:00:00,awareness,YouTube,page_visit,144,False,True,SESS_5877,tablet,Coca-Cola Share a Coke Gen Z
+JRN_54,CUST_14,2026-01-30T05:00:00,intent,Snapchat,purchase,139,False,True,SESS_9934,mobile,Coca-Cola Share a Coke Gen Z
+JRN_55,CUST_198,2026-01-31T19:00:00,retention,YouTube,checkout_start,125,False,True,SESS_5306,desktop,Coca-Cola Share a Coke Gen Z
+JRN_56,CUST_48,2026-02-07T10:00:00,evaluation,Facebook,review,571,True,False,SESS_9295,desktop,Coca-Cola Share a Coke Gen Z
+JRN_57,CUST_94,2026-01-28T12:00:00,evaluation,Twitter,share,37,True,True,SESS_5750,tablet,Coca-Cola Share a Coke Gen Z
+JRN_58,CUST_60,2026-02-19T12:00:00,awareness,Twitter,review,127,False,True,SESS_7059,mobile,Coca-Cola Share a Coke Gen Z
+JRN_59,CUST_295,2026-02-13T16:00:00,interest,YouTube,review,600,False,False,SESS_2753,desktop,Coca-Cola Share a Coke Gen Z
+JRN_60,CUST_279,2026-01-03T13:00:00,intent,YouTube,return_visit,554,False,True,SESS_9427,desktop,Coca-Cola Share a Coke Gen Z
+JRN_61,CUST_249,2026-02-19T00:00:00,purchase,Facebook,share,121,True,False,SESS_3249,desktop,Coca-Cola Share a Coke Gen Z
+JRN_62,CUST_233,2026-03-11T21:00:00,retention,Facebook,checkout_start,100,True,False,SESS_6591,tablet,Coca-Cola Share a Coke Gen Z
+JRN_63,CUST_240,2026-02-06T19:00:00,interest,Influencer,product_view,304,True,False,SESS_2388,tablet,Coca-Cola Share a Coke Gen Z
+JRN_64,CUST_127,2026-02-11T10:00:00,consideration,Influencer,ad_view,433,False,True,SESS_5603,mobile,Coca-Cola Share a Coke Gen Z
+JRN_65,CUST_286,2026-02-11T00:00:00,evaluation,YouTube,page_visit,263,False,False,SESS_4782,tablet,Coca-Cola Share a Coke Gen Z
+JRN_66,CUST_293,2026-03-09T09:00:00,consideration,Snapchat,review,546,True,True,SESS_2235,tablet,Coca-Cola Share a Coke Gen Z
+JRN_67,CUST_183,2026-03-15T23:00:00,intent,Facebook,add_to_cart,519,True,True,SESS_7205,tablet,Coca-Cola Share a Coke Gen Z
+JRN_68,CUST_183,2026-01-15T03:00:00,evaluation,Facebook,page_visit,454,False,True,SESS_8093,mobile,Coca-Cola Share a Coke Gen Z
+JRN_69,CUST_230,2026-01-18T11:00:00,retention,Twitter,page_visit,375,True,True,SESS_1859,desktop,Coca-Cola Share a Coke Gen Z
+JRN_70,CUST_254,2026-02-11T05:00:00,interest,Twitter,add_to_cart,301,False,False,SESS_8844,tablet,Coca-Cola Share a Coke Gen Z
+JRN_71,CUST_252,2026-02-05T18:00:00,intent,Google Ads,purchase,337,False,False,SESS_6578,tablet,Coca-Cola Share a Coke Gen Z
+JRN_72,CUST_188,2026-01-18T22:00:00,purchase,Snapchat,checkout_start,482,True,False,SESS_2864,tablet,Coca-Cola Share a Coke Gen Z
+JRN_73,CUST_193,2026-01-29T22:00:00,consideration,Snapchat,ad_view,260,True,True,SESS_7713,desktop,Coca-Cola Share a Coke Gen Z
+JRN_74,CUST_55,2026-01-03T04:00:00,intent,Snapchat,share,22,True,False,SESS_6482,desktop,Coca-Cola Share a Coke Gen Z
+JRN_75,CUST_214,2026-02-25T15:00:00,consideration,Instagram,review,87,False,True,SESS_7752,desktop,Coca-Cola Share a Coke Gen Z
+JRN_76,CUST_249,2026-03-16T13:00:00,intent,Facebook,checkout_start,85,True,False,SESS_7134,mobile,Coca-Cola Share a Coke Gen Z
+JRN_77,CUST_120,2026-02-25T02:00:00,interest,YouTube,page_visit,195,True,True,SESS_1393,tablet,Coca-Cola Share a Coke Gen Z
+JRN_78,CUST_144,2026-02-20T01:00:00,awareness,Influencer,add_to_cart,504,False,True,SESS_3066,desktop,Coca-Cola Share a Coke Gen Z
+JRN_79,CUST_101,2026-01-22T08:00:00,awareness,Snapchat,ad_view,129,False,True,SESS_6156,desktop,Coca-Cola Share a Coke Gen Z
+JRN_80,CUST_148,2026-03-23T15:00:00,purchase,Facebook,purchase,305,False,False,SESS_2437,desktop,Coca-Cola Share a Coke Gen Z
+JRN_81,CUST_297,2026-03-11T04:00:00,retention,Facebook,checkout_start,289,True,True,SESS_5872,desktop,Coca-Cola Share a Coke Gen Z
+JRN_82,CUST_35,2026-03-19T01:00:00,retention,Twitter,return_visit,168,False,False,SESS_5473,mobile,Coca-Cola Share a Coke Gen Z
+JRN_83,CUST_188,2026-03-04T10:00:00,retention,Snapchat,return_visit,133,False,False,SESS_2548,tablet,Coca-Cola Share a Coke Gen Z
+JRN_84,CUST_285,2026-01-15T20:00:00,consideration,Google Ads,checkout_start,305,True,True,SESS_2379,tablet,Coca-Cola Share a Coke Gen Z
+JRN_85,CUST_14,2026-03-03T14:00:00,awareness,Google Ads,product_view,596,True,True,SESS_9784,mobile,Coca-Cola Share a Coke Gen Z
+JRN_86,CUST_165,2026-01-17T20:00:00,awareness,Snapchat,purchase,525,False,False,SESS_6827,mobile,Coca-Cola Share a Coke Gen Z
+JRN_87,CUST_275,2026-01-10T12:00:00,intent,Instagram,return_visit,320,True,False,SESS_3871,desktop,Coca-Cola Share a Coke Gen Z
+JRN_88,CUST_244,2026-03-09T20:00:00,consideration,Facebook,page_visit,78,True,False,SESS_8890,tablet,Coca-Cola Share a Coke Gen Z
+JRN_89,CUST_141,2026-01-07T07:00:00,retention,Influencer,product_view,33,False,True,SESS_5223,desktop,Coca-Cola Share a Coke Gen Z
+JRN_90,CUST_160,2026-02-15T08:00:00,purchase,Snapchat,review,299,True,True,SESS_2045,desktop,Coca-Cola Share a Coke Gen Z
+JRN_91,CUST_198,2026-01-16T18:00:00,evaluation,Facebook,review,392,True,True,SESS_9354,desktop,Coca-Cola Share a Coke Gen Z
+JRN_92,CUST_253,2026-03-04T17:00:00,evaluation,Google Ads,share,562,True,False,SESS_4898,desktop,Coca-Cola Share a Coke Gen Z
+JRN_93,CUST_261,2026-02-25T03:00:00,purchase,Twitter,review,551,False,False,SESS_6868,desktop,Coca-Cola Share a Coke Gen Z
+JRN_94,CUST_36,2026-01-26T13:00:00,retention,Snapchat,checkout_start,204,False,True,SESS_1942,tablet,Coca-Cola Share a Coke Gen Z
+JRN_95,CUST_106,2026-02-08T19:00:00,consideration,Twitter,checkout_start,595,True,True,SESS_8730,tablet,Coca-Cola Share a Coke Gen Z
+JRN_96,CUST_62,2026-02-20T10:00:00,intent,Google Ads,checkout_start,585,True,True,SESS_2162,desktop,Coca-Cola Share a Coke Gen Z
+JRN_97,CUST_161,2026-03-17T19:00:00,interest,Snapchat,checkout_start,533,False,False,SESS_3738,tablet,Coca-Cola Share a Coke Gen Z
+JRN_98,CUST_68,2026-03-12T01:00:00,interest,Influencer,share,115,False,False,SESS_2203,tablet,Coca-Cola Share a Coke Gen Z
+JRN_99,CUST_110,2026-01-16T10:00:00,consideration,Snapchat,product_view,72,False,True,SESS_7180,desktop,Coca-Cola Share a Coke Gen Z
+JRN_100,CUST_150,2026-01-16T21:00:00,intent,Instagram,checkout_start,28,False,False,SESS_9541,desktop,Coca-Cola Share a Coke Gen Z
+JRN_101,CUST_209,2026-02-25T20:00:00,purchase,Influencer,page_visit,571,True,True,SESS_8113,tablet,Coca-Cola Share a Coke Gen Z
+JRN_102,CUST_225,2026-01-10T13:00:00,retention,Google Ads,checkout_start,192,False,False,SESS_2576,mobile,Coca-Cola Share a Coke Gen Z
+JRN_103,CUST_150,2026-01-05T22:00:00,consideration,Snapchat,share,102,False,False,SESS_5545,desktop,Coca-Cola Share a Coke Gen Z
+JRN_104,CUST_59,2026-02-20T14:00:00,purchase,Facebook,ad_view,496,True,False,SESS_2259,desktop,Coca-Cola Share a Coke Gen Z
+JRN_105,CUST_308,2026-01-08T06:00:00,intent,Snapchat,page_visit,403,False,False,SESS_1841,tablet,Coca-Cola Share a Coke Gen Z
+JRN_106,CUST_71,2026-01-20T18:00:00,consideration,Twitter,share,416,False,False,SESS_1702,desktop,Coca-Cola Share a Coke Gen Z
+JRN_107,CUST_175,2026-02-07T22:00:00,intent,Snapchat,review,377,True,False,SESS_4136,tablet,Coca-Cola Share a Coke Gen Z
+JRN_108,CUST_51,2026-01-31T10:00:00,awareness,Twitter,share,90,True,False,SESS_4263,mobile,Coca-Cola Share a Coke Gen Z
+JRN_109,CUST_318,2026-03-19T19:00:00,interest,Snapchat,product_view,144,True,False,SESS_7757,mobile,Coca-Cola Share a Coke Gen Z
+JRN_110,CUST_300,2026-01-29T22:00:00,retention,YouTube,product_view,162,False,False,SESS_9843,tablet,Coca-Cola Share a Coke Gen Z
+JRN_111,CUST_182,2026-03-01T08:00:00,evaluation,Twitter,return_visit,518,False,True,SESS_1575,desktop,Coca-Cola Share a Coke Gen Z
+JRN_112,CUST_54,2026-01-08T20:00:00,intent,Influencer,share,251,True,False,SESS_8067,tablet,Coca-Cola Share a Coke Gen Z
+JRN_113,CUST_294,2026-03-09T03:00:00,intent,Snapchat,share,41,False,False,SESS_7502,mobile,Coca-Cola Share a Coke Gen Z
+JRN_114,CUST_77,2026-02-18T12:00:00,awareness,YouTube,product_view,482,True,False,SESS_2644,tablet,Coca-Cola Share a Coke Gen Z
+JRN_115,CUST_313,2026-03-21T16:00:00,evaluation,Google Ads,return_visit,21,False,True,SESS_9762,desktop,Coca-Cola Share a Coke Gen Z
+JRN_116,CUST_89,2026-02-24T00:00:00,evaluation,YouTube,page_visit,412,False,False,SESS_6914,mobile,Coca-Cola Share a Coke Gen Z
+JRN_117,CUST_256,2026-01-09T00:00:00,purchase,Instagram,purchase,449,True,True,SESS_5949,tablet,Coca-Cola Share a Coke Gen Z
+JRN_118,CUST_302,2026-02-28T08:00:00,awareness,Instagram,add_to_cart,426,False,True,SESS_4380,tablet,Coca-Cola Share a Coke Gen Z
+JRN_119,CUST_285,2026-02-05T07:00:00,purchase,Facebook,product_view,291,False,False,SESS_8685,tablet,Coca-Cola Share a Coke Gen Z
+JRN_120,CUST_175,2026-01-03T20:00:00,retention,Instagram,ad_view,37,True,True,SESS_1656,desktop,Coca-Cola Share a Coke Gen Z
+JRN_121,CUST_248,2026-02-15T23:00:00,awareness,Influencer,review,36,True,False,SESS_8296,tablet,Coca-Cola Share a Coke Gen Z
+JRN_122,CUST_76,2026-02-05T01:00:00,evaluation,Instagram,purchase,534,False,True,SESS_8239,mobile,Coca-Cola Share a Coke Gen Z
+JRN_123,CUST_134,2026-02-05T05:00:00,interest,Facebook,purchase,562,False,True,SESS_6427,desktop,Coca-Cola Share a Coke Gen Z
+JRN_124,CUST_68,2026-01-20T11:00:00,evaluation,Google Ads,product_view,502,False,True,SESS_5021,tablet,Coca-Cola Share a Coke Gen Z
+JRN_125,CUST_131,2026-01-24T12:00:00,interest,YouTube,checkout_start,384,False,True,SESS_8579,desktop,Coca-Cola Share a Coke Gen Z
+JRN_126,CUST_33,2026-03-01T22:00:00,awareness,YouTube,checkout_start,508,True,False,SESS_9661,mobile,Coca-Cola Share a Coke Gen Z
+JRN_127,CUST_306,2026-03-16T00:00:00,awareness,Google Ads,ad_view,468,True,True,SESS_9118,tablet,Coca-Cola Share a Coke Gen Z
+JRN_128,CUST_174,2026-03-18T10:00:00,interest,Facebook,page_visit,481,True,True,SESS_7917,tablet,Coca-Cola Share a Coke Gen Z
+JRN_129,CUST_170,2026-03-23T13:00:00,retention,Snapchat,purchase,330,False,True,SESS_9700,tablet,Coca-Cola Share a Coke Gen Z
+JRN_130,CUST_66,2026-02-24T17:00:00,intent,Facebook,add_to_cart,459,True,False,SESS_1655,mobile,Coca-Cola Share a Coke Gen Z
+JRN_131,CUST_156,2026-02-17T04:00:00,consideration,Snapchat,return_visit,151,False,True,SESS_2620,mobile,Coca-Cola Share a Coke Gen Z
+JRN_132,CUST_284,2026-03-18T11:00:00,awareness,Google Ads,page_visit,426,True,True,SESS_2242,mobile,Coca-Cola Share a Coke Gen Z
+JRN_133,CUST_104,2026-02-17T08:00:00,awareness,Twitter,share,202,False,False,SESS_8095,desktop,Coca-Cola Share a Coke Gen Z
+JRN_134,CUST_302,2026-03-14T22:00:00,awareness,Facebook,add_to_cart,168,False,True,SESS_6583,desktop,Coca-Cola Share a Coke Gen Z
+JRN_135,CUST_9,2026-01-03T06:00:00,intent,Facebook,add_to_cart,180,False,False,SESS_8803,tablet,Coca-Cola Share a Coke Gen Z
+JRN_136,CUST_33,2026-02-09T02:00:00,consideration,Google Ads,return_visit,157,False,False,SESS_8832,mobile,Coca-Cola Share a Coke Gen Z
+JRN_137,CUST_249,2026-03-08T14:00:00,awareness,Twitter,share,541,False,False,SESS_2061,tablet,Coca-Cola Share a Coke Gen Z
+JRN_138,CUST_104,2026-02-16T09:00:00,evaluation,Snapchat,checkout_start,484,True,True,SESS_3272,desktop,Coca-Cola Share a Coke Gen Z
+JRN_139,CUST_90,2026-01-31T04:00:00,evaluation,Instagram,checkout_start,254,True,False,SESS_5008,tablet,Coca-Cola Share a Coke Gen Z
+JRN_140,CUST_3,2026-03-05T12:00:00,purchase,Snapchat,add_to_cart,449,True,False,SESS_2723,desktop,Coca-Cola Share a Coke Gen Z
+JRN_141,CUST_232,2026-02-03T12:00:00,interest,Google Ads,page_visit,153,True,False,SESS_4174,mobile,Coca-Cola Share a Coke Gen Z
+JRN_142,CUST_36,2026-01-29T23:00:00,consideration,Snapchat,product_view,214,False,False,SESS_5345,tablet,Coca-Cola Share a Coke Gen Z
+JRN_143,CUST_158,2026-03-06T14:00:00,retention,Snapchat,share,573,True,True,SESS_3788,desktop,Coca-Cola Share a Coke Gen Z
+JRN_144,CUST_62,2026-03-12T11:00:00,consideration,Twitter,ad_view,152,True,True,SESS_1143,mobile,Coca-Cola Share a Coke Gen Z
+JRN_145,CUST_91,2026-03-14T07:00:00,awareness,YouTube,ad_view,254,False,True,SESS_4731,tablet,Coca-Cola Share a Coke Gen Z
+JRN_146,CUST_113,2026-03-20T08:00:00,purchase,YouTube,product_view,365,False,True,SESS_8847,desktop,Coca-Cola Share a Coke Gen Z
+JRN_147,CUST_311,2026-01-15T20:00:00,intent,Instagram,purchase,214,False,True,SESS_5354,desktop,Coca-Cola Share a Coke Gen Z
+JRN_148,CUST_13,2026-03-21T18:00:00,intent,YouTube,review,507,False,False,SESS_6680,mobile,Coca-Cola Share a Coke Gen Z
+JRN_149,CUST_214,2026-01-25T09:00:00,awareness,Snapchat,purchase,29,False,True,SESS_4803,mobile,Coca-Cola Share a Coke Gen Z
+JRN_150,CUST_272,2026-03-13T16:00:00,retention,Influencer,share,203,True,True,SESS_8868,desktop,Coca-Cola Share a Coke Gen Z
+JRN_151,CUST_209,2026-02-03T04:00:00,awareness,Snapchat,product_view,456,True,False,SESS_1642,desktop,Coca-Cola Share a Coke Gen Z
+JRN_152,CUST_203,2026-01-26T03:00:00,interest,Snapchat,add_to_cart,12,False,False,SESS_2075,mobile,Coca-Cola Share a Coke Gen Z
+JRN_153,CUST_310,2026-02-18T09:00:00,intent,Twitter,page_visit,582,True,True,SESS_8493,tablet,Coca-Cola Share a Coke Gen Z
+JRN_154,CUST_276,2026-03-14T04:00:00,awareness,Influencer,add_to_cart,181,True,False,SESS_2393,desktop,Coca-Cola Share a Coke Gen Z
+JRN_155,CUST_73,2026-01-17T01:00:00,awareness,Google Ads,product_view,440,True,False,SESS_1505,tablet,Coca-Cola Share a Coke Gen Z
+JRN_156,CUST_120,2026-02-01T14:00:00,retention,Google Ads,checkout_start,277,False,True,SESS_4924,tablet,Coca-Cola Share a Coke Gen Z
+JRN_157,CUST_30,2026-01-02T19:00:00,evaluation,Instagram,add_to_cart,331,False,True,SESS_6199,tablet,Coca-Cola Share a Coke Gen Z
+JRN_158,CUST_216,2026-02-15T03:00:00,intent,Twitter,share,350,True,True,SESS_6608,mobile,Coca-Cola Share a Coke Gen Z
+JRN_159,CUST_111,2026-03-19T22:00:00,purchase,Facebook,share,201,False,False,SESS_2711,desktop,Coca-Cola Share a Coke Gen Z
+JRN_160,CUST_302,2026-03-11T12:00:00,evaluation,Twitter,ad_view,201,True,True,SESS_1981,mobile,Coca-Cola Share a Coke Gen Z
+JRN_161,CUST_289,2026-03-12T06:00:00,intent,Snapchat,purchase,336,False,True,SESS_5828,tablet,Coca-Cola Share a Coke Gen Z
+JRN_162,CUST_100,2026-03-01T08:00:00,purchase,Snapchat,purchase,272,True,False,SESS_3394,tablet,Coca-Cola Share a Coke Gen Z
+JRN_163,CUST_212,2026-01-07T04:00:00,evaluation,Facebook,ad_view,415,False,True,SESS_4605,desktop,Coca-Cola Share a Coke Gen Z
+JRN_164,CUST_220,2026-03-04T13:00:00,awareness,YouTube,product_view,373,False,False,SESS_4704,tablet,Coca-Cola Share a Coke Gen Z
+JRN_165,CUST_208,2026-02-04T14:00:00,awareness,Facebook,checkout_start,286,True,True,SESS_8930,desktop,Coca-Cola Share a Coke Gen Z
+JRN_166,CUST_15,2026-02-13T21:00:00,intent,Facebook,product_view,384,True,True,SESS_6377,mobile,Coca-Cola Share a Coke Gen Z
+JRN_167,CUST_240,2026-01-17T00:00:00,consideration,Facebook,return_visit,348,True,True,SESS_1587,desktop,Coca-Cola Share a Coke Gen Z
+JRN_168,CUST_208,2026-02-23T06:00:00,retention,Facebook,ad_view,166,True,False,SESS_9811,mobile,Coca-Cola Share a Coke Gen Z
+JRN_169,CUST_193,2026-02-27T10:00:00,purchase,Google Ads,review,532,True,True,SESS_4385,desktop,Coca-Cola Share a Coke Gen Z
+JRN_170,CUST_132,2026-01-02T13:00:00,evaluation,Influencer,ad_view,520,False,False,SESS_4561,desktop,Coca-Cola Share a Coke Gen Z
+JRN_171,CUST_299,2026-03-16T13:00:00,purchase,YouTube,checkout_start,328,True,False,SESS_5894,desktop,Coca-Cola Share a Coke Gen Z
+JRN_172,CUST_102,2026-01-07T03:00:00,purchase,Instagram,review,548,True,True,SESS_8072,desktop,Coca-Cola Share a Coke Gen Z
+JRN_173,CUST_184,2026-02-20T13:00:00,awareness,Influencer,product_view,575,False,False,SESS_6769,desktop,Coca-Cola Share a Coke Gen Z
+JRN_174,CUST_246,2026-02-24T05:00:00,evaluation,Facebook,product_view,141,True,False,SESS_1320,tablet,Coca-Cola Share a Coke Gen Z
+JRN_175,CUST_185,2026-02-02T16:00:00,retention,Instagram,checkout_start,240,True,True,SESS_3805,desktop,Coca-Cola Share a Coke Gen Z
+JRN_176,CUST_311,2026-02-12T11:00:00,evaluation,Google Ads,review,389,False,True,SESS_2602,tablet,Coca-Cola Share a Coke Gen Z
+JRN_177,CUST_199,2026-01-03T15:00:00,intent,Snapchat,return_visit,298,True,False,SESS_1311,tablet,Coca-Cola Share a Coke Gen Z
+JRN_178,CUST_61,2026-01-23T09:00:00,intent,Influencer,review,276,True,False,SESS_4312,tablet,Coca-Cola Share a Coke Gen Z
+JRN_179,CUST_111,2026-01-21T08:00:00,interest,Instagram,ad_view,482,False,True,SESS_2788,desktop,Coca-Cola Share a Coke Gen Z
+JRN_180,CUST_256,2026-03-19T14:00:00,evaluation,Influencer,review,420,False,False,SESS_6640,mobile,Coca-Cola Share a Coke Gen Z
+JRN_181,CUST_247,2026-02-11T09:00:00,purchase,Influencer,purchase,440,True,True,SESS_3703,mobile,Coca-Cola Share a Coke Gen Z
+JRN_182,CUST_227,2026-01-02T09:00:00,intent,Instagram,page_visit,109,True,True,SESS_5287,desktop,Coca-Cola Share a Coke Gen Z
+JRN_183,CUST_68,2026-03-14T09:00:00,retention,Instagram,ad_view,107,True,True,SESS_8347,tablet,Coca-Cola Share a Coke Gen Z
+JRN_184,CUST_50,2026-01-30T12:00:00,awareness,Google Ads,product_view,60,True,False,SESS_5177,tablet,Coca-Cola Share a Coke Gen Z
+JRN_185,CUST_119,2026-02-22T12:00:00,intent,Instagram,page_visit,571,False,False,SESS_2556,tablet,Coca-Cola Share a Coke Gen Z
+JRN_186,CUST_84,2026-01-04T07:00:00,retention,YouTube,product_view,39,True,True,SESS_8443,desktop,Coca-Cola Share a Coke Gen Z
+JRN_187,CUST_270,2026-01-30T03:00:00,awareness,Influencer,review,546,False,False,SESS_6871,desktop,Coca-Cola Share a Coke Gen Z
+JRN_188,CUST_301,2026-02-11T23:00:00,purchase,Twitter,return_visit,221,False,False,SESS_2493,desktop,Coca-Cola Share a Coke Gen Z
+JRN_189,CUST_251,2026-03-22T01:00:00,purchase,Influencer,ad_view,587,True,False,SESS_5856,mobile,Coca-Cola Share a Coke Gen Z
+JRN_190,CUST_183,2026-03-21T11:00:00,evaluation,YouTube,checkout_start,505,True,True,SESS_4677,tablet,Coca-Cola Share a Coke Gen Z
+JRN_191,CUST_80,2026-02-11T08:00:00,retention,YouTube,return_visit,68,True,True,SESS_3011,mobile,Coca-Cola Share a Coke Gen Z
+JRN_192,CUST_3,2026-01-24T21:00:00,awareness,Snapchat,page_visit,487,False,True,SESS_8294,mobile,Coca-Cola Share a Coke Gen Z
+JRN_193,CUST_132,2026-02-14T23:00:00,purchase,Facebook,purchase,202,True,True,SESS_1080,desktop,Coca-Cola Share a Coke Gen Z
+JRN_194,CUST_219,2026-02-18T05:00:00,evaluation,Instagram,ad_view,94,True,False,SESS_7837,desktop,Coca-Cola Share a Coke Gen Z
+JRN_195,CUST_112,2026-01-17T16:00:00,consideration,Snapchat,add_to_cart,121,False,False,SESS_7124,mobile,Coca-Cola Share a Coke Gen Z
+JRN_196,CUST_233,2026-01-29T04:00:00,awareness,Influencer,checkout_start,157,False,True,SESS_1887,tablet,Coca-Cola Share a Coke Gen Z
+JRN_197,CUST_272,2026-02-23T02:00:00,evaluation,Google Ads,ad_view,482,False,True,SESS_9364,tablet,Coca-Cola Share a Coke Gen Z
+JRN_198,CUST_214,2026-02-15T00:00:00,retention,Influencer,add_to_cart,50,True,True,SESS_6015,mobile,Coca-Cola Share a Coke Gen Z
+JRN_199,CUST_99,2026-03-20T01:00:00,evaluation,Google Ads,purchase,227,False,False,SESS_5580,mobile,Coca-Cola Share a Coke Gen Z
+JRN_200,CUST_33,2026-01-11T22:00:00,retention,YouTube,return_visit,158,False,False,SESS_9565,mobile,Coca-Cola Share a Coke Gen Z
+JRN_201,CUST_312,2026-02-08T04:00:00,retention,YouTube,add_to_cart,452,False,False,SESS_6074,mobile,Coca-Cola Share a Coke Gen Z
+JRN_202,CUST_105,2026-01-28T05:00:00,awareness,Google Ads,product_view,456,True,False,SESS_3278,tablet,Coca-Cola Share a Coke Gen Z
+JRN_203,CUST_277,2026-01-28T03:00:00,evaluation,Snapchat,return_visit,264,True,True,SESS_3821,mobile,Coca-Cola Share a Coke Gen Z
+JRN_204,CUST_128,2026-01-20T08:00:00,interest,Snapchat,share,599,False,True,SESS_1098,tablet,Coca-Cola Share a Coke Gen Z
+JRN_205,CUST_224,2026-02-25T07:00:00,retention,YouTube,share,535,False,False,SESS_9531,tablet,Coca-Cola Share a Coke Gen Z
+JRN_206,CUST_5,2026-02-23T21:00:00,consideration,Google Ads,page_visit,91,True,False,SESS_8114,tablet,Coca-Cola Share a Coke Gen Z
+JRN_207,CUST_231,2026-02-16T14:00:00,evaluation,YouTube,checkout_start,477,False,False,SESS_1695,tablet,Coca-Cola Share a Coke Gen Z
+JRN_208,CUST_220,2026-03-21T01:00:00,intent,Snapchat,return_visit,390,False,True,SESS_7881,tablet,Coca-Cola Share a Coke Gen Z
+JRN_209,CUST_157,2026-01-28T15:00:00,interest,Influencer,share,528,False,True,SESS_1516,desktop,Coca-Cola Share a Coke Gen Z
+JRN_210,CUST_123,2026-01-06T08:00:00,retention,YouTube,purchase,91,True,True,SESS_6571,tablet,Coca-Cola Share a Coke Gen Z
+JRN_211,CUST_61,2026-01-21T01:00:00,intent,Twitter,checkout_start,167,False,False,SESS_4044,mobile,Coca-Cola Share a Coke Gen Z
+JRN_212,CUST_231,2026-01-02T14:00:00,interest,Facebook,ad_view,114,True,True,SESS_4394,tablet,Coca-Cola Share a Coke Gen Z
+JRN_213,CUST_56,2026-01-18T04:00:00,purchase,YouTube,purchase,240,True,False,SESS_6335,tablet,Coca-Cola Share a Coke Gen Z
+JRN_214,CUST_183,2026-02-23T07:00:00,awareness,Instagram,product_view,155,True,False,SESS_3478,tablet,Coca-Cola Share a Coke Gen Z
+JRN_215,CUST_57,2026-03-25T08:00:00,retention,Twitter,purchase,564,False,False,SESS_7193,tablet,Coca-Cola Share a Coke Gen Z
+JRN_216,CUST_231,2026-01-04T07:00:00,consideration,Snapchat,return_visit,117,False,True,SESS_7756,tablet,Coca-Cola Share a Coke Gen Z
+JRN_217,CUST_48,2026-01-03T18:00:00,intent,Google Ads,checkout_start,119,True,True,SESS_2775,desktop,Coca-Cola Share a Coke Gen Z
+JRN_218,CUST_223,2026-02-24T02:00:00,evaluation,Instagram,share,96,True,True,SESS_3427,desktop,Coca-Cola Share a Coke Gen Z
+JRN_219,CUST_241,2026-03-12T15:00:00,purchase,Twitter,ad_view,248,False,True,SESS_3717,tablet,Coca-Cola Share a Coke Gen Z
+JRN_220,CUST_45,2026-03-23T17:00:00,retention,Facebook,page_visit,51,False,True,SESS_1127,desktop,Coca-Cola Share a Coke Gen Z
+JRN_221,CUST_140,2026-02-15T21:00:00,evaluation,Facebook,ad_view,327,True,True,SESS_4590,desktop,Coca-Cola Share a Coke Gen Z
+JRN_222,CUST_209,2026-03-07T20:00:00,evaluation,Google Ads,return_visit,442,True,True,SESS_1836,tablet,Coca-Cola Share a Coke Gen Z
+JRN_223,CUST_260,2026-01-16T07:00:00,intent,Facebook,page_visit,183,False,False,SESS_2424,mobile,Coca-Cola Share a Coke Gen Z
+JRN_224,CUST_302,2026-02-17T13:00:00,purchase,Twitter,add_to_cart,174,True,False,SESS_5221,tablet,Coca-Cola Share a Coke Gen Z
+JRN_225,CUST_130,2026-02-03T02:00:00,evaluation,Instagram,add_to_cart,229,False,True,SESS_9789,mobile,Coca-Cola Share a Coke Gen Z
+JRN_226,CUST_52,2026-03-08T03:00:00,awareness,Twitter,ad_view,499,False,True,SESS_9085,desktop,Coca-Cola Share a Coke Gen Z
+JRN_227,CUST_144,2026-03-12T19:00:00,awareness,Twitter,page_visit,396,True,True,SESS_9986,mobile,Coca-Cola Share a Coke Gen Z
+JRN_228,CUST_85,2026-02-24T19:00:00,retention,YouTube,checkout_start,291,True,False,SESS_1519,desktop,Coca-Cola Share a Coke Gen Z
+JRN_229,CUST_79,2026-03-17T04:00:00,consideration,YouTube,share,52,True,False,SESS_3834,desktop,Coca-Cola Share a Coke Gen Z
+JRN_230,CUST_34,2026-02-23T10:00:00,interest,Instagram,product_view,194,False,False,SESS_5157,tablet,Coca-Cola Share a Coke Gen Z
+JRN_231,CUST_222,2026-02-27T05:00:00,awareness,Instagram,purchase,435,False,True,SESS_9376,desktop,Coca-Cola Share a Coke Gen Z
+JRN_232,CUST_266,2026-03-04T13:00:00,evaluation,Influencer,share,519,True,False,SESS_2060,tablet,Coca-Cola Share a Coke Gen Z
+JRN_233,CUST_185,2026-03-03T09:00:00,consideration,Twitter,ad_view,47,False,True,SESS_4262,tablet,Coca-Cola Share a Coke Gen Z
+JRN_234,CUST_255,2026-02-08T11:00:00,awareness,YouTube,page_visit,116,False,False,SESS_4404,desktop,Coca-Cola Share a Coke Gen Z
+JRN_235,CUST_30,2026-01-05T01:00:00,purchase,Snapchat,review,393,False,True,SESS_7573,tablet,Coca-Cola Share a Coke Gen Z
+JRN_236,CUST_195,2026-02-06T20:00:00,consideration,Instagram,checkout_start,366,False,True,SESS_4017,mobile,Coca-Cola Share a Coke Gen Z
+JRN_237,CUST_202,2026-02-27T17:00:00,evaluation,Snapchat,share,202,False,True,SESS_5955,mobile,Coca-Cola Share a Coke Gen Z
+JRN_238,CUST_125,2026-03-01T20:00:00,awareness,Google Ads,review,375,True,False,SESS_8473,mobile,Coca-Cola Share a Coke Gen Z
+JRN_239,CUST_254,2026-02-14T13:00:00,retention,Twitter,share,214,True,True,SESS_8435,mobile,Coca-Cola Share a Coke Gen Z
+JRN_240,CUST_137,2026-01-21T04:00:00,consideration,Influencer,product_view,397,True,True,SESS_7014,mobile,Coca-Cola Share a Coke Gen Z
+JRN_241,CUST_207,2026-01-23T03:00:00,interest,Influencer,checkout_start,546,False,True,SESS_7413,tablet,Coca-Cola Share a Coke Gen Z
+JRN_242,CUST_181,2026-01-10T12:00:00,retention,Twitter,purchase,313,False,False,SESS_6943,tablet,Coca-Cola Share a Coke Gen Z
+JRN_243,CUST_212,2026-02-04T21:00:00,awareness,Instagram,checkout_start,375,False,True,SESS_1320,tablet,Coca-Cola Share a Coke Gen Z
+JRN_244,CUST_191,2026-03-22T12:00:00,evaluation,Twitter,share,37,False,False,SESS_1726,tablet,Coca-Cola Share a Coke Gen Z
+JRN_245,CUST_125,2026-02-15T21:00:00,evaluation,Instagram,add_to_cart,540,True,False,SESS_5620,desktop,Coca-Cola Share a Coke Gen Z
+JRN_246,CUST_253,2026-01-22T07:00:00,awareness,Facebook,return_visit,141,True,True,SESS_7422,mobile,Coca-Cola Share a Coke Gen Z
+JRN_247,CUST_128,2026-03-11T14:00:00,retention,Influencer,ad_view,115,True,True,SESS_2513,mobile,Coca-Cola Share a Coke Gen Z
+JRN_248,CUST_120,2026-02-21T00:00:00,intent,Influencer,return_visit,353,True,False,SESS_6016,tablet,Coca-Cola Share a Coke Gen Z
+JRN_249,CUST_205,2026-02-05T08:00:00,evaluation,Twitter,checkout_start,23,False,True,SESS_3333,mobile,Coca-Cola Share a Coke Gen Z
+JRN_250,CUST_123,2026-01-26T09:00:00,interest,Instagram,review,430,True,True,SESS_7941,tablet,Coca-Cola Share a Coke Gen Z
+JRN_251,CUST_313,2026-03-17T19:00:00,evaluation,Instagram,return_visit,551,True,True,SESS_6830,tablet,Coca-Cola Share a Coke Gen Z
+JRN_252,CUST_260,2026-03-07T06:00:00,purchase,Twitter,purchase,270,True,False,SESS_1873,tablet,Coca-Cola Share a Coke Gen Z
+JRN_253,CUST_121,2026-01-12T04:00:00,awareness,Influencer,return_visit,535,True,False,SESS_5605,desktop,Coca-Cola Share a Coke Gen Z
+JRN_254,CUST_35,2026-02-04T05:00:00,evaluation,Twitter,return_visit,410,True,True,SESS_8284,tablet,Coca-Cola Share a Coke Gen Z
+JRN_255,CUST_234,2026-02-17T16:00:00,purchase,Instagram,purchase,428,False,False,SESS_2065,mobile,Coca-Cola Share a Coke Gen Z
+JRN_256,CUST_76,2026-01-13T19:00:00,awareness,Facebook,page_visit,116,True,True,SESS_7999,mobile,Coca-Cola Share a Coke Gen Z
+JRN_257,CUST_293,2026-02-25T16:00:00,awareness,Snapchat,page_visit,520,True,True,SESS_6747,tablet,Coca-Cola Share a Coke Gen Z
+JRN_258,CUST_230,2026-02-03T22:00:00,awareness,YouTube,review,448,True,True,SESS_3789,desktop,Coca-Cola Share a Coke Gen Z
+JRN_259,CUST_126,2026-03-05T05:00:00,interest,YouTube,review,584,False,True,SESS_6204,tablet,Coca-Cola Share a Coke Gen Z

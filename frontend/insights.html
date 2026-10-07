@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketPilot AI — Customer Voice & Sentiment Analytics</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span style="font-size: 1.7rem;">✈️</span>
+                <div>
+                    <div class="sidebar-logo">MarketPilot AI</div>
+                    <div class="sidebar-subtitle">Agentic Automation</div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Core Operations</div>
+                    <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span> Home</a>
+                    <a href="dashboard.html" class="nav-item"><span class="nav-icon">📊</span> Dashboard</a>
+                    <a href="campaign.html" class="nav-item"><span class="nav-icon">🎯</span> New Campaign</a>
+                    <a href="upload.html" class="nav-item"><span class="nav-icon">📤</span> Upload Data</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Swarm Observability</div>
+                    <a href="agents.html" class="nav-item"><span class="nav-icon">🤖</span> Agent Swarm</a>
+                    <a href="insights.html" class="nav-item active"><span class="nav-icon">💡</span> Customer Voice</a>
+                    <a href="segments.html" class="nav-item"><span class="nav-icon">👥</span> Segmentation</a>
+                    <a href="journey.html" class="nav-item"><span class="nav-icon">🔄</span> Journey Funnel</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Decision Engine</div>
+                    <a href="optimization.html" class="nav-item"><span class="nav-icon">⚡</span> Optimization</a>
+                    <a href="budget.html" class="nav-item"><span class="nav-icon">💰</span> Budget Allocation</a>
+                    <a href="scenarios.html" class="nav-item"><span class="nav-icon">🔮</span> Scenario Simulator</a>
+                    <a href="recommendations.html" class="nav-item"><span class="nav-icon">✍️</span> Human Review</a>
+                    <a href="rag.html" class="nav-item"><span class="nav-icon">📚</span> RAG Explorer</a>
+                    <a href="reports.html" class="nav-item"><span class="nav-icon">📋</span> Executive Brief</a>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn btn-ghost btn-sm" onclick="toggleTheme()" style="width:100%; display:flex; justify-content:center; gap:8px;">
+                    <span class="theme-toggle">☀️</span> Toggle Theme
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div style="margin-bottom: 24px;">
+                <h1 style="font-size:26px; font-weight:800; color:var(--text-heading); margin-bottom:4px;">
+                    💡 Customer Voice, Sentiment & Topic Analysis
+                </h1>
+                <p style="color:var(--text-secondary); font-size:14px;">
+                    Autonomous qualitative analysis extracting sentiment polarity, consumer desires, emerging pain points, and thematic drivers from raw customer feedback.
+                </p>
+            </div>
+
+            <!-- Sentiment KPI row -->
+            <div class="grid-4" style="margin-bottom: 24px;">
+                <div class="card card-metric">
+                    <div class="metric-label">Positive Sentiment</div>
+                    <div class="metric-value" id="pos-metric-val" style="color:var(--success);">70.0%</div>
+                    <div class="metric-change" style="color:var(--success);">Dominant Praise</div>
+                </div>
+                <div class="card card-metric">
+                    <div class="metric-label">Neutral / Mixed</div>
+                    <div class="metric-value" id="neu-metric-val">22.0%</div>
+                    <div class="metric-change" style="color:var(--text-muted);">Baseline inquiries</div>
+                </div>
+                <div class="card card-metric">
+                    <div class="metric-label">Negative Sentiment</div>
+                    <div class="metric-value" id="neg-metric-val" style="color:var(--error);">8.0%</div>
+                    <div class="metric-change" style="color:var(--success);">Low complaint rate</div>
+                </div>
+                <div class="card card-metric">
+                    <div class="metric-label">Audited Feedback Rows</div>
+                    <div class="metric-value" id="tot-metric-val">150 Reviews</div>
+                    <div class="metric-change" style="color:var(--accent);">High sample validity</div>
+                </div>
+            </div>
+
+            <div class="grid-2" style="margin-bottom:24px;">
+                <!-- Sentiment Doughnut -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 style="font-size:16px; font-weight:700;">Sentiment Distribution</h3>
+                    </div>
+                    <div class="chart-container" style="height:260px;">
+                        <canvas id="sentimentChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Praise Drivers & Pain Points -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 style="font-size:16px; font-weight:700;">Extracted Qualitative Themes</h3>
+                    </div>
+                    <div style="margin-bottom:16px;">
+                        <div style="font-weight:700; color:var(--success); font-size:13px; margin-bottom:8px;">🌟 Positive Praise Drivers:</div>
+                        <div id="praise-drivers-container" style="display:flex; flex-wrap:wrap; gap:6px;">
+                            <span class="badge badge-success">High Brand Resonance</span>
+                            <span class="badge badge-success">Creative Storytelling</span>
+                            <span class="badge badge-success">Social Virality</span>
+                        </div>
+                    </div>
+                    <div style="margin-bottom:16px;">
+                        <div style="font-weight:700; color:var(--error); font-size:13px; margin-bottom:8px;">⚠️ Consumer Pain Points:</div>
+                        <div id="pain-points-container" style="display:flex; flex-wrap:wrap; gap:6px;">
+                            <span class="badge badge-error">Regional Stock Delays</span>
+                            <span class="badge badge-error">Ad Repetition Frequency</span>
+                            <span class="badge badge-error">Checkout Latency</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="font-weight:700; color:var(--warning); font-size:13px; margin-bottom:8px;">🚀 Emerging Consumer Desires:</div>
+                        <div id="emerging-desires-container" style="display:flex; flex-wrap:wrap; gap:6px;">
+                            <span class="badge badge-warning">Express 1-Click Checkout</span>
+                            <span class="badge badge-warning">Personalized Loyalty Rewards</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Raw Customer Feedback Stream -->
+            <div class="card">
+                <div class="card-header" style="display:flex; justify-content:space-between; align-items:center;">
+                    <h3 style="font-size:16px; font-weight:700;">💬 Verified Customer Feedback Explorer</h3>
+                    <div style="display:flex; gap:8px;">
+                        <button class="btn btn-ghost btn-sm" onclick="filterFeedback('all')">All</button>
+                        <button class="btn btn-ghost btn-sm" onclick="filterFeedback('positive')">Positive</button>
+                        <button class="btn btn-ghost btn-sm" onclick="filterFeedback('negative')">Negative</button>
+                    </div>
+                </div>
+                <div style="overflow-x:auto;">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Customer ID</th>
+                                <th>Channel</th>
+                                <th>Rating</th>
+                                <th>Review Text</th>
+                                <th>Detected Sentiment</th>
+                            </tr>
+                        </thead>
+                        <tbody id="feedback-table-body">
+                            <tr>
+                                <td><code>CUST001</code></td>
+                                <td>Instagram</td>
+                                <td>⭐⭐⭐⭐⭐</td>
+                                <td>"Loved the personalized bottles! Shared a coke with my college roommate."</td>
+                                <td><span class="badge badge-success">POSITIVE (0.85)</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>CUST002</code></td>
+                                <td>Twitter</td>
+                                <td>⭐⭐</td>
+                                <td>"Could not find my name in any store in Delhi. Disappointed."</td>
+                                <td><span class="badge badge-error">NEGATIVE (-0.60)</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>CUST003</code></td>
+                                <td>YouTube</td>
+                                <td>⭐⭐⭐⭐</td>
+                                <td>"Great Gen Z ad concept, loved the catchy soundtrack."</td>
+                                <td><span class="badge badge-success">POSITIVE (0.70)</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>CUST004</code></td>
+                                <td>Snapchat</td>
+                                <td>⭐⭐⭐⭐⭐</td>
+                                <td>"The AR lens for personalized cans was so cool to use with friends."</td>
+                                <td><span class="badge badge-success">POSITIVE (0.92)</span></td>
+                            </tr>
+                            <tr>
+                                <td><code>CUST005</code></td>
+                                <td>Google Ads</td>
+                                <td>⭐⭐⭐</td>
+                                <td>"Delivery took 4 days for the personalized gift box."</td>
+                                <td><span class="badge badge-warning">NEUTRAL (0.05)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/insights.js"></script>
+</body>
+</html>

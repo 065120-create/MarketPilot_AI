@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketPilot AI — New Campaign Creator & Entity Intelligence</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .correction-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+        .correction-card:hover { border-color: var(--accent); }
+        .correction-highlight {
+            color: var(--accent-light);
+            font-weight: 700;
+            background: rgba(67, 97, 238, 0.15);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        .step-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            transition: var(--transition);
+        }
+        .step-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--border);
+            font-size: 11px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span style="font-size: 1.7rem;">✈️</span>
+                <div>
+                    <div class="sidebar-logo">MarketPilot AI</div>
+                    <div class="sidebar-subtitle">Agentic Automation</div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Core Operations</div>
+                    <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span> Home</a>
+                    <a href="dashboard.html" class="nav-item"><span class="nav-icon">📊</span> Dashboard</a>
+                    <a href="campaign.html" class="nav-item active"><span class="nav-icon">🎯</span> New Campaign</a>
+                    <a href="upload.html" class="nav-item"><span class="nav-icon">📤</span> Upload Data</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Swarm Observability</div>
+                    <a href="agents.html" class="nav-item"><span class="nav-icon">🤖</span> Agent Swarm</a>
+                    <a href="insights.html" class="nav-item"><span class="nav-icon">💡</span> Customer Voice</a>
+                    <a href="segments.html" class="nav-item"><span class="nav-icon">👥</span> Segmentation</a>
+                    <a href="journey.html" class="nav-item"><span class="nav-icon">🔄</span> Journey Funnel</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Decision Engine</div>
+                    <a href="optimization.html" class="nav-item"><span class="nav-icon">⚡</span> Optimization</a>
+                    <a href="budget.html" class="nav-item"><span class="nav-icon">💰</span> Budget Allocation</a>
+                    <a href="scenarios.html" class="nav-item"><span class="nav-icon">🔮</span> Scenario Simulator</a>
+                    <a href="recommendations.html" class="nav-item"><span class="nav-icon">✍️</span> Human Review</a>
+                    <a href="rag.html" class="nav-item"><span class="nav-icon">📚</span> RAG Explorer</a>
+                    <a href="reports.html" class="nav-item"><span class="nav-icon">📋</span> Executive Brief</a>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn btn-ghost btn-sm" onclick="toggleTheme()" style="width:100%; display:flex; justify-content:center; gap:8px;">
+                    <span class="theme-toggle">☀️</span> Toggle Theme
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div style="margin-bottom: 24px;">
+                <h1 style="font-size:26px; font-weight:800; color:var(--text-heading); margin-bottom:4px;">
+                    🎯 New Campaign Blueprint & Entity Intelligence
+                </h1>
+                <p style="color:var(--text-secondary); font-size:14px;">
+                    Enter ANY brand, company, or campaign. Real-time normalization detects entity errors, protects audit logs, and coordinates multi-agent goals.
+                </p>
+            </div>
+
+            <!-- Workflow State Stepper -->
+            <div class="workflow-stepper" id="workflow-stepper" style="display:flex; justify-content:space-between; align-items:center; background:var(--bg-secondary); border:1px solid var(--border); border-radius:var(--radius); padding:14px 24px; margin-bottom:24px;">
+                <div class="step-item" id="step-1"><span class="step-num">1</span> <strong>Enter Blueprint</strong></div>
+                <div style="color:var(--text-muted);">&rarr;</div>
+                <div class="step-item" id="step-2"><span class="step-num">2</span> <strong>Verify Entities</strong></div>
+                <div style="color:var(--text-muted);">&rarr;</div>
+                <div class="step-item" id="step-3"><span class="step-num">3</span> <strong>Run Multi-Agent Analysis</strong></div>
+                <div style="color:var(--text-muted);">&rarr;</div>
+                <div class="step-item" id="step-4"><span class="step-num">4</span> <strong>Analysis Complete</strong></div>
+            </div>
+
+            <!-- Quick Template Loader -->
+            <div class="card" style="margin-bottom: 24px; background:linear-gradient(135deg, rgba(67,97,238,0.08), rgba(123,44,191,0.08));">
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+                    <div>
+                        <strong style="color:var(--text-heading);">⚡ Quick Presets (Click to autofill with test typos):</strong>
+                        <div style="font-size:13px; color:var(--text-muted); margin-top:2px;">
+                            Demonstrates dynamic fuzzy normalization across any enterprise brand.
+                        </div>
+                    </div>
+                    <div style="display:flex; gap:8px;">
+                        <button class="btn btn-secondary btn-sm" onclick="loadPreset('cocacola')">🥤 Coca-Cola Demo</button>
+                        <button class="btn btn-secondary btn-sm" onclick="loadPreset('nike')">👟 Nike Running</button>
+                        <button class="btn btn-secondary btn-sm" onclick="loadPreset('starbucks')">☕ Starbucks App</button>
+                        <button class="btn btn-ghost btn-sm" onclick="clearForm()">🧹 Clear</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <!-- Left: Comprehensive Campaign Form -->
+                <div class="card">
+                    <div class="card-header" style="display:flex; justify-content:space-between; align-items:center;">
+                        <h3 style="font-size:18px; font-weight:700;">Campaign Blueprint Parameters</h3>
+                        <span class="badge badge-info" id="verification-badge">Verification Pending</span>
+                    </div>
+                    
+                    <form id="campaign-form" onsubmit="event.preventDefault();">
+                        <div class="grid-2">
+                            <div class="form-group">
+                                <label class="form-label">Brand / Company Name *</label>
+                                <input type="text" class="form-control" id="brand" required placeholder="e.g. cocacola or Nike" value="cocacola">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Campaign Name *</label>
+                                <input type="text" class="form-control" id="campaign-name" required placeholder="e.g. Share a cok" value="Share a cok — Gen Z Digital">
+                            </div>
+                        </div>
+
+                        <div class="grid-2">
+                            <div class="form-group">
+                                <label class="form-label">Industry</label>
+                                <input type="text" class="form-control" id="industry" placeholder="e.g. FMCG / Beverages" value="FMCG / Beverages">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Primary Objective</label>
+                                <select class="form-control" id="objective">
+                                    <option value="Increase engagement and conversion">Increase Engagement & Conversion</option>
+                                    <option value="Brand Awareness & Reach">Brand Awareness & Reach</option>
+                                    <option value="Customer Acquisition & ROAS">Customer Acquisition & ROAS</option>
+                                    <option value="Retention & Loyalty">Retention & Loyalty</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid-2">
+                            <div class="form-group">
+                                <label class="form-label">Total Campaign Budget (₹) *</label>
+                                <input type="number" class="form-control" id="budget" required value="1000000" min="10000">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Target Geography</label>
+                                <input type="text" class="form-control" id="geography" placeholder="e.g. Delhi NCR, Mumbai" value="delhi ncr, mumbai, bangalore">
+                            </div>
+                        </div>
+
+                        <div class="grid-2">
+                            <div class="form-group">
+                                <label class="form-label">Target Audience</label>
+                                <input type="text" class="form-control" id="audience" placeholder="e.g. Urban Gen Z (18-25)" value="Urban Gen Z (18-25)">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Campaign Duration</label>
+                                <input type="text" class="form-control" id="duration" placeholder="e.g. 3 months" value="3 months (Q1 2026)">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Primary Media Channels (Comma-separated)</label>
+                            <input type="text" class="form-control" id="channels" placeholder="e.g. Instagarm, YouTube, Facebook" value="Instagarm, YouTube, FB, Google Ads, Snapchat">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Campaign Strategic Description</label>
+                            <textarea class="form-control" id="description" rows="3">Digital personalized bottle activation with social UGC and interactive reels targeting Gen Z consumers.</textarea>
+                        </div>
+
+                        <div class="grid-2">
+                            <div class="form-group">
+                                <label class="form-label">Key Competitors (Optional)</label>
+                                <input type="text" class="form-control" id="competitors" placeholder="e.g. Pepsi, Sprite" value="Pepsi, Sprite">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Budget / Media Constraints</label>
+                                <input type="text" class="form-control" id="constraints" placeholder="e.g. Max 35% on single channel" value="Max 35% on any single channel">
+                            </div>
+                        </div>
+
+                        <div style="display:flex; justify-content:flex-end; gap:12px; margin-top:20px;">
+                            <button type="button" class="btn btn-secondary" id="check-norm-btn" onclick="checkNormalization()">🔍 Check Normalization</button>
+                            <button type="button" class="btn btn-primary" id="main-action-btn">🚀 Run Multi-Agent Analysis</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Right: Normalization Intelligence & Audit Trail -->
+                <div>
+                    <div class="card" style="margin-bottom: 24px;">
+                        <div class="card-header" style="display:flex; justify-content:space-between; align-items:center;">
+                            <h3 style="font-size:16px; font-weight:700;">🧠 Entity Normalization Layer</h3>
+                            <span class="badge badge-warning" id="corrections-count">Scanning Input</span>
+                        </div>
+                        <div style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">
+                            System detects typos without hardcoded company lists. Review suggestions or keep originals for the audit log.
+                        </div>
+
+                        <div id="corrections-container">
+                            <!-- Populated dynamically -->
+                            <div style="text-align:center; padding:30px; color:var(--text-muted);">
+                                Click "Check Normalization" or edit fields to see live entity correction suggestions.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Audit Trail Box -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 style="font-size:16px; font-weight:700;">📝 Input Audit Trail</h3>
+                        </div>
+                        <div id="audit-trail-log" style="background:var(--bg-primary); border-radius:var(--radius-sm); padding:16px; font-family:var(--font-mono); font-size:12px; color:var(--text-secondary); max-height:220px; overflow-y:auto; line-height:1.6;">
+                            <div>[System] Audit trail initialized. Awaiting user input verification.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/campaign.js"></script>
+</body>
+</html>

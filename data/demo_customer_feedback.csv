@@ -1,0 +1,165 @@
+feedback_id,customer_id,date,channel,rating,sentiment,review,category,campaign_name
+FB_0,CUST_29,2026-03-06,Google Ads,,neutral,"It was okay, nothing special",experience,Coca-Cola Share a Coke Gen Z
+FB_1,CUST_352,2026-02-28,YouTube,,neutral,Just another drink,product,Coca-Cola Share a Coke Gen Z
+FB_2,CUST_316,2026-02-18,Twitter,,neutral,"It was okay, nothing special",pricing,Coca-Cola Share a Coke Gen Z
+FB_3,CUST_880,2026-01-30,Snapchat,5,positive,,product,Coca-Cola Share a Coke Gen Z
+FB_4,CUST_37,2026-01-12,Facebook,3,neutral,,product,Coca-Cola Share a Coke Gen Z
+FB_5,CUST_29,2026-03-09,Google Ads,3,neutral,Fine,campaign,Coca-Cola Share a Coke Gen Z
+FB_5,CUST_29,2026-03-09,Google Ads,3,neutral,Fine,campaign,Coca-Cola Share a Coke Gen Z
+FB_6,CUST_710,2026-03-10,Twitter,3,neutral,Just another drink,service,Coca-Cola Share a Coke Gen Z
+FB_6,CUST_710,2026-03-10,Twitter,3,neutral,Just another drink,service,Coca-Cola Share a Coke Gen Z
+FB_7,CUST_688,2026-02-17,YouTube,3,mixed,Good taste but couldn't find my name,experience,Coca-Cola Share a Coke Gen Z
+FB_7,CUST_688,2026-02-17,YouTube,3,mixed,Good taste but couldn't find my name,experience,Coca-Cola Share a Coke Gen Z
+FB_8,CUST_782,2026-02-21,Snapchat,1,negative,Too sweet,delivery,Coca-Cola Share a Coke Gen Z
+FB_8,CUST_782,2026-02-21,Snapchat,1,negative,Too sweet,delivery,Coca-Cola Share a Coke Gen Z
+FB_9,CUST_258,2026-02-18,Facebook,1,mixed_sentiment,Too sweet,product,Coca-Cola Share a Coke Gen Z
+FB_10,CUST_34,2026-02-03,Twitter,3,mixed_sentiment,Fine,pricing,Coca-Cola Share a Coke Gen Z
+FB_11,CUST_732,2026-03-20,Snapchat,3,mixed_sentiment,"It was okay, nothing special",experience,Coca-Cola Share a Coke Gen Z
+FB_12,CUST_930,2026-02-21,Instagram,3,mixed_sentiment,Good taste but couldn't find my name,experience,Coca-Cola Share a Coke Gen Z
+FB_13,CUST_751,2026-01-25,Instagram,3,mixed_sentiment,"Loved the ad, hated the wait",delivery,Coca-Cola Share a Coke Gen Z
+FB_14,CUST_143,2026-03-13,Snapchat,3,mixed,"Loved the ad, hated the wait",service,Coca-Cola Share a Coke Gen Z
+FB_15,CUST_810,2026-03-26,YouTube,5,positive,Great idea,experience,Coca-Cola Share a Coke Gen Z
+FB_16,CUST_541,2026-01-24,Snapchat,3,neutral,Just another drink,pricing,Coca-Cola Share a Coke Gen Z
+FB_17,CUST_872,2026-02-05,Influencer,4,positive,Found my name easily,product,Coca-Cola Share a Coke Gen Z
+FB_18,CUST_114,2026-03-09,Google Ads,1,negative,Couldn't find my name on any bottle,delivery,Coca-Cola Share a Coke Gen Z
+FB_19,CUST_855,2026-01-04,Snapchat,3,mixed,"Loved the ad, hated the wait",delivery,Coca-Cola Share a Coke Gen Z
+FB_20,CUST_833,2026-02-27,Google Ads,1,negative,Too sweet,service,Coca-Cola Share a Coke Gen Z
+FB_21,CUST_377,2026-02-10,Instagram,3,mixed,Good taste but couldn't find my name,experience,Coca-Cola Share a Coke Gen Z
+FB_22,CUST_317,2026-02-24,Instagram,5,positive,Loved the personalized bottles!,campaign,Coca-Cola Share a Coke Gen Z
+FB_23,CUST_692,2026-03-07,YouTube,4,positive,Loved the personalized bottles!,experience,Coca-Cola Share a Coke Gen Z
+FB_24,CUST_120,2026-02-03,Instagram,5,positive,The Instagram campaign was so engaging,pricing,Coca-Cola Share a Coke Gen Z
+FB_25,CUST_546,2026-02-04,Instagram,4,positive,Great idea,delivery,Coca-Cola Share a Coke Gen Z
+FB_26,CUST_409,2026-02-07,Twitter,3,neutral,Just another drink,delivery,Coca-Cola Share a Coke Gen Z
+FB_27,CUST_384,2026-03-07,YouTube,3,mixed,Good taste but couldn't find my name,product,Coca-Cola Share a Coke Gen Z
+FB_28,CUST_836,2026-02-05,YouTube,4,positive,The Instagram campaign was so engaging,pricing,Coca-Cola Share a Coke Gen Z
+FB_29,CUST_861,2026-01-30,Influencer,3,mixed,"Loved the ad, hated the wait",experience,Coca-Cola Share a Coke Gen Z
+FB_30,CUST_117,2026-01-03,YouTube,2,negative,Bad delivery,campaign,Coca-Cola Share a Coke Gen Z
+FB_31,CUST_3,2026-03-03,Google Ads,5,positive,Found my name easily,pricing,Coca-Cola Share a Coke Gen Z
+FB_32,CUST_152,2026-03-17,Influencer,2,negative,Too many ads on YouTube,campaign,Coca-Cola Share a Coke Gen Z
+FB_33,CUST_575,2026-01-05,YouTube,3,neutral,Fine,pricing,Coca-Cola Share a Coke Gen Z
+FB_34,CUST_81,2026-03-29,Google Ads,3,mixed,"Loved the ad, hated the wait",service,Coca-Cola Share a Coke Gen Z
+FB_35,CUST_6,2026-01-29,Influencer,4,positive,Found my name easily,delivery,Coca-Cola Share a Coke Gen Z
+FB_36,CUST_447,2026-01-26,Twitter,2,negative,Too many ads on YouTube,pricing,Coca-Cola Share a Coke Gen Z
+FB_37,CUST_518,2026-02-16,Snapchat,5,positive,Great idea,experience,Coca-Cola Share a Coke Gen Z
+FB_38,CUST_346,2026-02-13,Snapchat,3,mixed,"Loved the ad, hated the wait",product,Coca-Cola Share a Coke Gen Z
+FB_39,CUST_61,2026-03-09,Instagram,3,neutral,Fine,campaign,Coca-Cola Share a Coke Gen Z
+FB_40,CUST_893,2026-03-14,Google Ads,5,positive,Great idea,experience,Coca-Cola Share a Coke Gen Z
+FB_41,CUST_795,2026-03-05,Instagram,2,negative,Bad delivery,campaign,Coca-Cola Share a Coke Gen Z
+FB_42,CUST_624,2026-01-31,Snapchat,3,neutral,"It was okay, nothing special",pricing,Coca-Cola Share a Coke Gen Z
+FB_43,CUST_62,2026-01-15,Influencer,3,neutral,"It was okay, nothing special",pricing,Coca-Cola Share a Coke Gen Z
+FB_44,CUST_102,2026-02-03,Twitter,3,mixed,Good taste but couldn't find my name,delivery,Coca-Cola Share a Coke Gen Z
+FB_45,CUST_150,2026-03-30,Twitter,3,neutral,Fine,experience,Coca-Cola Share a Coke Gen Z
+FB_46,CUST_243,2026-01-03,Facebook,5,positive,Loved the personalized bottles!,service,Coca-Cola Share a Coke Gen Z
+FB_47,CUST_835,2026-02-01,Influencer,3,mixed,"Loved the ad, hated the wait",experience,Coca-Cola Share a Coke Gen Z
+FB_48,CUST_524,2026-01-01,Facebook,3,neutral,Just another drink,service,Coca-Cola Share a Coke Gen Z
+FB_49,CUST_561,2026-01-16,YouTube,1,negative,Bad delivery,delivery,Coca-Cola Share a Coke Gen Z
+FB_50,CUST_980,2026-03-08,Twitter,4,positive,Great idea,campaign,Coca-Cola Share a Coke Gen Z
+FB_51,CUST_593,2026-03-27,YouTube,1,negative,Too many ads on YouTube,product,Coca-Cola Share a Coke Gen Z
+FB_52,CUST_157,2026-01-16,Google Ads,3,mixed,Good taste but couldn't find my name,delivery,Coca-Cola Share a Coke Gen Z
+FB_53,CUST_183,2026-03-17,Instagram,3,neutral,Just another drink,product,Coca-Cola Share a Coke Gen Z
+FB_54,CUST_93,2026-03-25,Instagram,3,mixed,"Loved the ad, hated the wait",pricing,Coca-Cola Share a Coke Gen Z
+FB_55,CUST_796,2026-03-19,Twitter,3,mixed,"Loved the ad, hated the wait",campaign,Coca-Cola Share a Coke Gen Z
+FB_56,CUST_400,2026-03-16,Influencer,3,mixed,"Loved the ad, hated the wait",service,Coca-Cola Share a Coke Gen Z
+FB_57,CUST_46,2026-02-01,Influencer,4,positive,The Instagram campaign was so engaging,pricing,Coca-Cola Share a Coke Gen Z
+FB_58,CUST_194,2026-03-26,Snapchat,3,mixed,"Loved the ad, hated the wait",service,Coca-Cola Share a Coke Gen Z
+FB_59,CUST_879,2026-02-20,Influencer,3,neutral,Just another drink,pricing,Coca-Cola Share a Coke Gen Z
+FB_60,CUST_666,2026-01-27,Twitter,4,positive,Great idea,pricing,Coca-Cola Share a Coke Gen Z
+FB_61,CUST_93,2026-03-24,YouTube,1,negative,Too sweet,campaign,Coca-Cola Share a Coke Gen Z
+FB_62,CUST_706,2026-03-23,Google Ads,1,negative,Couldn't find my name on any bottle,service,Coca-Cola Share a Coke Gen Z
+FB_63,CUST_928,2026-02-09,Google Ads,5,positive,Loved the personalized bottles!,delivery,Coca-Cola Share a Coke Gen Z
+FB_64,CUST_24,2026-02-02,Snapchat,3,mixed,"Loved the ad, hated the wait",pricing,Coca-Cola Share a Coke Gen Z
+FB_65,CUST_502,2026-02-05,Snapchat,1,negative,Too sweet,product,Coca-Cola Share a Coke Gen Z
+FB_66,CUST_99,2026-04-01,Instagram,4,positive,Great idea,experience,Coca-Cola Share a Coke Gen Z
+FB_67,CUST_55,2026-02-28,Google Ads,1,negative,Too sweet,pricing,Coca-Cola Share a Coke Gen Z
+FB_68,CUST_45,2026-03-16,Snapchat,1,negative,Too sweet,delivery,Coca-Cola Share a Coke Gen Z
+FB_69,CUST_848,2026-02-12,YouTube,2,negative,Couldn't find my name on any bottle,product,Coca-Cola Share a Coke Gen Z
+FB_70,CUST_957,2026-02-15,Instagram,1,negative,Couldn't find my name on any bottle,campaign,Coca-Cola Share a Coke Gen Z
+FB_71,CUST_170,2026-03-28,Google Ads,3,mixed,"Loved the ad, hated the wait",delivery,Coca-Cola Share a Coke Gen Z
+FB_72,CUST_452,2026-01-31,Facebook,3,neutral,Just another drink,delivery,Coca-Cola Share a Coke Gen Z
+FB_73,CUST_328,2026-01-06,Facebook,2,negative,Too sweet,pricing,Coca-Cola Share a Coke Gen Z
+FB_74,CUST_547,2026-02-25,Twitter,3,mixed,"Loved the ad, hated the wait",experience,Coca-Cola Share a Coke Gen Z
+FB_75,CUST_936,2026-03-25,Facebook,1,negative,Couldn't find my name on any bottle,product,Coca-Cola Share a Coke Gen Z
+FB_76,CUST_865,2026-01-15,Instagram,3,mixed,"Loved the ad, hated the wait",product,Coca-Cola Share a Coke Gen Z
+FB_77,CUST_438,2026-03-16,Facebook,3,neutral,Just another drink,pricing,Coca-Cola Share a Coke Gen Z
+FB_78,CUST_606,2026-02-17,Influencer,1,negative,Bad delivery,pricing,Coca-Cola Share a Coke Gen Z
+FB_79,CUST_732,2026-02-22,Twitter,3,neutral,"It was okay, nothing special",campaign,Coca-Cola Share a Coke Gen Z
+FB_80,CUST_515,2026-01-25,Influencer,3,mixed,"Loved the ad, hated the wait",pricing,Coca-Cola Share a Coke Gen Z
+FB_81,CUST_798,2026-02-11,Twitter,5,positive,The Instagram campaign was so engaging,product,Coca-Cola Share a Coke Gen Z
+FB_82,CUST_695,2026-01-23,Snapchat,3,neutral,Fine,service,Coca-Cola Share a Coke Gen Z
+FB_83,CUST_742,2026-02-20,YouTube,3,mixed,"Loved the ad, hated the wait",delivery,Coca-Cola Share a Coke Gen Z
+FB_84,CUST_865,2026-03-05,YouTube,3,mixed,"Loved the ad, hated the wait",experience,Coca-Cola Share a Coke Gen Z
+FB_85,CUST_739,2026-03-30,Snapchat,3,mixed,"Loved the ad, hated the wait",experience,Coca-Cola Share a Coke Gen Z
+FB_86,CUST_518,2026-03-10,Google Ads,4,positive,Loved the personalized bottles!,product,Coca-Cola Share a Coke Gen Z
+FB_87,CUST_706,2026-01-07,Twitter,2,negative,Bad delivery,service,Coca-Cola Share a Coke Gen Z
+FB_88,CUST_206,2026-01-22,Instagram,4,positive,Great idea,product,Coca-Cola Share a Coke Gen Z
+FB_89,CUST_719,2026-03-10,Facebook,5,positive,Loved the personalized bottles!,product,Coca-Cola Share a Coke Gen Z
+FB_90,CUST_27,2026-01-23,Snapchat,3,mixed,Good taste but couldn't find my name,pricing,Coca-Cola Share a Coke Gen Z
+FB_91,CUST_21,2026-03-23,Influencer,3,mixed,Good taste but couldn't find my name,product,Coca-Cola Share a Coke Gen Z
+FB_92,CUST_476,2026-03-20,Instagram,2,negative,Too sweet,pricing,Coca-Cola Share a Coke Gen Z
+FB_93,CUST_656,2026-02-10,Instagram,3,mixed,"Loved the ad, hated the wait",product,Coca-Cola Share a Coke Gen Z
+FB_94,CUST_500,2026-01-04,Instagram,2,negative,Couldn't find my name on any bottle,pricing,Coca-Cola Share a Coke Gen Z
+FB_95,CUST_151,2026-02-16,Instagram,3,mixed,Good taste but couldn't find my name,experience,Coca-Cola Share a Coke Gen Z
+FB_96,CUST_219,2026-03-29,YouTube,3,mixed,"Loved the ad, hated the wait",delivery,Coca-Cola Share a Coke Gen Z
+FB_97,CUST_530,2026-03-22,YouTube,3,mixed,"Loved the ad, hated the wait",campaign,Coca-Cola Share a Coke Gen Z
+FB_98,CUST_856,2026-04-01,Google Ads,2,negative,Couldn't find my name on any bottle,pricing,Coca-Cola Share a Coke Gen Z
+FB_99,CUST_857,2026-02-15,Instagram,3,mixed,Good taste but couldn't find my name,campaign,Coca-Cola Share a Coke Gen Z
+FB_100,CUST_692,2026-03-16,Facebook,3,neutral,"It was okay, nothing special",delivery,Coca-Cola Share a Coke Gen Z
+FB_101,CUST_189,2026-02-14,Twitter,2,negative,Too many ads on YouTube,pricing,Coca-Cola Share a Coke Gen Z
+FB_102,CUST_179,2026-03-08,Influencer,5,positive,Found my name easily,campaign,Coca-Cola Share a Coke Gen Z
+FB_103,CUST_649,2026-01-13,Influencer,3,mixed,Good taste but couldn't find my name,service,Coca-Cola Share a Coke Gen Z
+FB_104,CUST_930,2026-02-05,YouTube,3,mixed,Good taste but couldn't find my name,experience,Coca-Cola Share a Coke Gen Z
+FB_105,CUST_199,2026-01-06,Facebook,5,positive,The Instagram campaign was so engaging,delivery,Coca-Cola Share a Coke Gen Z
+FB_106,CUST_831,2026-02-08,YouTube,2,negative,Couldn't find my name on any bottle,delivery,Coca-Cola Share a Coke Gen Z
+FB_107,CUST_480,2026-01-26,Instagram,3,mixed,Good taste but couldn't find my name,service,Coca-Cola Share a Coke Gen Z
+FB_108,CUST_744,2026-01-24,Facebook,1,negative,Too many ads on YouTube,service,Coca-Cola Share a Coke Gen Z
+FB_109,CUST_161,2026-03-20,Instagram,3,mixed,Good taste but couldn't find my name,pricing,Coca-Cola Share a Coke Gen Z
+FB_110,CUST_593,2026-02-11,Instagram,3,mixed,Good taste but couldn't find my name,delivery,Coca-Cola Share a Coke Gen Z
+FB_111,CUST_942,2026-02-18,Facebook,2,negative,Bad delivery,service,Coca-Cola Share a Coke Gen Z
+FB_112,CUST_372,2026-03-06,Facebook,1,negative,Too many ads on YouTube,delivery,Coca-Cola Share a Coke Gen Z
+FB_113,CUST_236,2026-03-04,Google Ads,3,neutral,Fine,pricing,Coca-Cola Share a Coke Gen Z
+FB_114,CUST_550,2026-01-20,YouTube,4,positive,Loved the personalized bottles!,delivery,Coca-Cola Share a Coke Gen Z
+FB_115,CUST_339,2026-03-14,Facebook,3,mixed,"Loved the ad, hated the wait",experience,Coca-Cola Share a Coke Gen Z
+FB_116,CUST_978,2026-01-27,Snapchat,3,mixed,Good taste but couldn't find my name,delivery,Coca-Cola Share a Coke Gen Z
+FB_117,CUST_133,2026-03-14,Twitter,2,negative,Bad delivery,campaign,Coca-Cola Share a Coke Gen Z
+FB_118,CUST_239,2026-02-04,Instagram,3,neutral,"It was okay, nothing special",campaign,Coca-Cola Share a Coke Gen Z
+FB_119,CUST_548,2026-03-08,Google Ads,4,positive,Found my name easily,product,Coca-Cola Share a Coke Gen Z
+FB_120,CUST_652,2026-02-20,Twitter,3,mixed,Good taste but couldn't find my name,delivery,Coca-Cola Share a Coke Gen Z
+FB_121,CUST_472,2026-03-10,Facebook,4,positive,Found my name easily,campaign,Coca-Cola Share a Coke Gen Z
+FB_122,CUST_753,2026-01-19,Snapchat,5,positive,Loved the personalized bottles!,pricing,Coca-Cola Share a Coke Gen Z
+FB_123,CUST_967,2026-04-01,YouTube,3,mixed,"Loved the ad, hated the wait",pricing,Coca-Cola Share a Coke Gen Z
+FB_124,CUST_17,2026-01-02,YouTube,3,mixed,Good taste but couldn't find my name,service,Coca-Cola Share a Coke Gen Z
+FB_125,CUST_624,2026-01-22,Facebook,2,negative,Too sweet,pricing,Coca-Cola Share a Coke Gen Z
+FB_126,CUST_573,2026-02-21,Instagram,5,positive,Loved the personalized bottles!,service,Coca-Cola Share a Coke Gen Z
+FB_127,CUST_712,2026-02-21,YouTube,3,mixed,"Loved the ad, hated the wait",product,Coca-Cola Share a Coke Gen Z
+FB_128,CUST_56,2026-02-24,Google Ads,5,positive,The Instagram campaign was so engaging,experience,Coca-Cola Share a Coke Gen Z
+FB_129,CUST_172,2026-02-18,Instagram,3,mixed,Good taste but couldn't find my name,campaign,Coca-Cola Share a Coke Gen Z
+FB_130,CUST_296,2026-01-07,Twitter,3,mixed,"Loved the ad, hated the wait",service,Coca-Cola Share a Coke Gen Z
+FB_131,CUST_400,2026-02-21,Snapchat,3,mixed,Good taste but couldn't find my name,pricing,Coca-Cola Share a Coke Gen Z
+FB_132,CUST_407,2026-01-05,YouTube,3,neutral,"It was okay, nothing special",campaign,Coca-Cola Share a Coke Gen Z
+FB_133,CUST_457,2026-02-21,Facebook,4,positive,The Instagram campaign was so engaging,delivery,Coca-Cola Share a Coke Gen Z
+FB_134,CUST_179,2026-02-21,Influencer,5,positive,The Instagram campaign was so engaging,product,Coca-Cola Share a Coke Gen Z
+FB_135,CUST_575,2026-03-07,Twitter,2,negative,Too sweet,campaign,Coca-Cola Share a Coke Gen Z
+FB_136,CUST_611,2026-03-03,Instagram,3,mixed,"Loved the ad, hated the wait",campaign,Coca-Cola Share a Coke Gen Z
+FB_137,CUST_700,2026-02-26,Facebook,3,neutral,"It was okay, nothing special",experience,Coca-Cola Share a Coke Gen Z
+FB_138,CUST_651,2026-01-28,Facebook,3,mixed,"Loved the ad, hated the wait",pricing,Coca-Cola Share a Coke Gen Z
+FB_139,CUST_602,2026-03-12,Twitter,4,positive,Loved the personalized bottles!,pricing,Coca-Cola Share a Coke Gen Z
+FB_140,CUST_253,2026-03-14,Influencer,5,positive,Found my name easily,campaign,Coca-Cola Share a Coke Gen Z
+FB_141,CUST_931,2026-03-16,Influencer,4,positive,Great idea,service,Coca-Cola Share a Coke Gen Z
+FB_142,CUST_762,2026-01-29,YouTube,5,positive,Great idea,product,Coca-Cola Share a Coke Gen Z
+FB_143,CUST_904,2026-03-26,Facebook,3,mixed,Good taste but couldn't find my name,delivery,Coca-Cola Share a Coke Gen Z
+FB_144,CUST_834,2026-02-07,Facebook,3,mixed,"Loved the ad, hated the wait",service,Coca-Cola Share a Coke Gen Z
+FB_145,CUST_542,2026-01-10,Influencer,4,positive,The Instagram campaign was so engaging,service,Coca-Cola Share a Coke Gen Z
+FB_146,CUST_27,2026-03-07,Facebook,3,mixed,Good taste but couldn't find my name,delivery,Coca-Cola Share a Coke Gen Z
+FB_147,CUST_874,2026-02-23,Google Ads,3,neutral,"It was okay, nothing special",product,Coca-Cola Share a Coke Gen Z
+FB_148,CUST_525,2026-03-10,Snapchat,4,positive,The Instagram campaign was so engaging,pricing,Coca-Cola Share a Coke Gen Z
+FB_149,CUST_320,2026-01-20,Google Ads,4,positive,Found my name easily,delivery,Coca-Cola Share a Coke Gen Z
+FB_150,CUST_691,2026-04-01,Google Ads,3,neutral,Just another drink,campaign,Coca-Cola Share a Coke Gen Z
+FB_151,CUST_870,2026-01-14,Twitter,1,negative,Couldn't find my name on any bottle,product,Coca-Cola Share a Coke Gen Z
+FB_152,CUST_884,2026-04-01,Google Ads,3,mixed,"Loved the ad, hated the wait",delivery,Coca-Cola Share a Coke Gen Z
+FB_153,CUST_939,2026-03-14,YouTube,4,positive,Loved the personalized bottles!,delivery,Coca-Cola Share a Coke Gen Z
+FB_154,CUST_785,2026-03-18,Twitter,3,neutral,"It was okay, nothing special",campaign,Coca-Cola Share a Coke Gen Z
+FB_155,CUST_129,2026-02-10,Google Ads,3,mixed,"Loved the ad, hated the wait",delivery,Coca-Cola Share a Coke Gen Z
+FB_156,CUST_186,2026-03-05,Instagram,3,neutral,"It was okay, nothing special",campaign,Coca-Cola Share a Coke Gen Z
+FB_157,CUST_68,2026-02-01,Instagram,5,positive,Found my name easily,product,Coca-Cola Share a Coke Gen Z
+FB_158,CUST_312,2026-03-14,Twitter,5,positive,Found my name easily,service,Coca-Cola Share a Coke Gen Z
+FB_159,CUST_911,2026-01-24,Facebook,5,positive,The Instagram campaign was so engaging,pricing,Coca-Cola Share a Coke Gen Z

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketPilot AI — Multi-Agent Swarm Execution Trace</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .agent-node {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-bottom: 16px;
+            position: relative;
+            transition: var(--transition);
+        }
+        .agent-node:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+        }
+        .agent-node.status-completed { border-left: 5px solid var(--success); }
+        .agent-node.status-rejected { border-left: 5px solid var(--error); background: rgba(239, 71, 111, 0.05); }
+        .agent-node.status-recovered { border-left: 5px solid var(--warning); background: rgba(255, 159, 28, 0.05); }
+        .agent-node.status-skipped { border-left: 5px solid var(--text-muted); opacity: 0.7; }
+        .agent-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .agent-title {
+            font-size: 16px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .agent-meta {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .agent-body {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        .agent-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 10px;
+        }
+        .tool-badge {
+            display: inline-block;
+            background: rgba(67, 97, 238, 0.15);
+            color: var(--accent-light);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-family: var(--font-mono);
+            margin-right: 4px;
+            margin-bottom: 4px;
+        }
+        .rag-badge {
+            background: rgba(123, 44, 191, 0.2);
+            color: #d8b4fe;
+            border: 1px solid rgba(123, 44, 191, 0.4);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+        .trace-pipeline {
+            position: relative;
+            padding-left: 20px;
+        }
+        .trace-pipeline::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            bottom: 20px;
+            left: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent), var(--purple), var(--success));
+        }
+    </style>
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span style="font-size: 1.7rem;">✈️</span>
+                <div>
+                    <div class="sidebar-logo">MarketPilot AI</div>
+                    <div class="sidebar-subtitle">Agentic Automation</div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Core Operations</div>
+                    <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span> Home</a>
+                    <a href="dashboard.html" class="nav-item"><span class="nav-icon">📊</span> Dashboard</a>
+                    <a href="campaign.html" class="nav-item"><span class="nav-icon">🎯</span> New Campaign</a>
+                    <a href="upload.html" class="nav-item"><span class="nav-icon">📤</span> Upload Data</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Swarm Observability</div>
+                    <a href="agents.html" class="nav-item active"><span class="nav-icon">🤖</span> Agent Swarm</a>
+                    <a href="insights.html" class="nav-item"><span class="nav-icon">💡</span> Customer Voice</a>
+                    <a href="segments.html" class="nav-item"><span class="nav-icon">👥</span> Segmentation</a>
+                    <a href="journey.html" class="nav-item"><span class="nav-icon">🔄</span> Journey Funnel</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Decision Engine</div>
+                    <a href="optimization.html" class="nav-item"><span class="nav-icon">⚡</span> Optimization</a>
+                    <a href="budget.html" class="nav-item"><span class="nav-icon">💰</span> Budget Allocation</a>
+                    <a href="scenarios.html" class="nav-icon"><span class="nav-icon">🔮</span> Scenario Simulator</a>
+                    <a href="recommendations.html" class="nav-item"><span class="nav-icon">✍️</span> Human Review</a>
+                    <a href="rag.html" class="nav-item"><span class="nav-icon">📚</span> RAG Explorer</a>
+                    <a href="reports.html" class="nav-item"><span class="nav-icon">📋</span> Executive Brief</a>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn btn-ghost btn-sm" onclick="toggleTheme()" style="width:100%; display:flex; justify-content:center; gap:8px;">
+                    <span class="theme-toggle">☀️</span> Toggle Theme
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 28px;">
+                <div>
+                    <h1 style="font-size:26px; font-weight:800; color:var(--text-heading); margin-bottom:4px;">
+                        🤖 Multi-Agent Execution Swarm Trace
+                    </h1>
+                    <p style="color:var(--text-secondary); font-size:14px;">
+                        Real-time observability trace detailing autonomous agent routing, tool function calls, RAG retrievals, and quality reflection loops.
+                    </p>
+                </div>
+                <div style="display:flex; gap:12px;">
+                    <button class="btn btn-secondary btn-sm" onclick="startDemo()">⚡ Rerun Demo Swarm</button>
+                    <button class="btn btn-primary btn-sm" onclick="location.reload()">🔄 Refresh Trace</button>
+                </div>
+            </div>
+
+            <!-- Swarm Status Summary Bar -->
+            <div class="grid-4" style="margin-bottom: 24px;">
+                <div class="card card-metric">
+                    <div class="metric-label">Active Agents in Swarm</div>
+                    <div class="metric-value">9 Specialist Nodes</div>
+                    <div class="metric-change" style="color:var(--success);">+ Orchestrator Master</div>
+                </div>
+                <div class="card card-metric">
+                    <div class="metric-label">Autonomous Quality Gates</div>
+                    <div class="metric-value" style="color:var(--warning);">Reflection Loop Active</div>
+                    <div class="metric-change" style="color:var(--success);">Self-healing enabled</div>
+                </div>
+                <div class="card card-metric">
+                    <div class="metric-label">RAG Knowledge State</div>
+                    <div class="metric-value" style="color:#d8b4fe;">10 Frameworks</div>
+                    <div class="metric-change" style="color:var(--text-muted);">Vector Cosine Engine</div>
+                </div>
+                <div class="card card-metric">
+                    <div class="metric-label">End-to-End Latency</div>
+                    <div class="metric-value" id="swarm-latency">140ms</div>
+                    <div class="metric-change" style="color:var(--success);">High throughput</div>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <!-- Left: Swarm Pipeline Flow -->
+                <div>
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+                        <h3 style="font-size:18px; font-weight:700;">Dynamic Execution Path</h3>
+                        <span class="badge badge-info" id="active-job-badge">Job: Loading...</span>
+                    </div>
+
+                    <div class="trace-pipeline" id="agent-nodes-container">
+                        <!-- Populated dynamically by agents.js from live job state -->
+                        <div style="text-align:center; padding:40px; color:var(--text-muted);">
+                            <div class="spinner" style="margin:0 auto 16px auto;"></div>
+                            Streaming agent swarm execution state...
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Detailed Node Inspector & System Logs -->
+                <div>
+                    <div class="card" style="margin-bottom: 24px;">
+                        <div class="card-header">
+                            <h3 style="font-size:16px; font-weight:700;">🔍 Agent Node Deep Inspector</h3>
+                        </div>
+                        <div id="inspector-content" style="padding:16px; font-size:14px; color:var(--text-secondary);">
+                            <div style="text-align:center; padding:30px 10px; color:var(--text-muted);">
+                                👆 Click on any agent node to the left to inspect its parameters, function tool outputs, and reasoning rationale.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" style="display:flex; justify-content:space-between; align-items:center;">
+                            <h3 style="font-size:16px; font-weight:700;">📜 Swarm Event Log (Audit Stream)</h3>
+                            <span class="badge badge-success">LIVE</span>
+                        </div>
+                        <div id="swarm-raw-logs" style="background:var(--bg-primary); border-radius:var(--radius-sm); padding:16px; font-family:var(--font-mono); font-size:12px; color:var(--text-secondary); height:340px; overflow-y:auto; line-height:1.6;">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/agents.js"></script>
+</body>
+</html>

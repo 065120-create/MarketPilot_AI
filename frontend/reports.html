@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketPilot AI — Executive Brief & Report Center</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .report-frame {
+            width: 100%;
+            height: 750px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span style="font-size: 1.7rem;">✈️</span>
+                <div>
+                    <div class="sidebar-logo">MarketPilot AI</div>
+                    <div class="sidebar-subtitle">Agentic Automation</div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Core Operations</div>
+                    <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span> Home</a>
+                    <a href="dashboard.html" class="nav-item"><span class="nav-icon">📊</span> Dashboard</a>
+                    <a href="campaign.html" class="nav-item"><span class="nav-icon">🎯</span> New Campaign</a>
+                    <a href="upload.html" class="nav-item"><span class="nav-icon">📤</span> Upload Data</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Swarm Observability</div>
+                    <a href="agents.html" class="nav-item"><span class="nav-icon">🤖</span> Agent Swarm</a>
+                    <a href="insights.html" class="nav-item"><span class="nav-icon">💡</span> Customer Voice</a>
+                    <a href="segments.html" class="nav-item"><span class="nav-icon">👥</span> Segmentation</a>
+                    <a href="journey.html" class="nav-item"><span class="nav-icon">🔄</span> Journey Funnel</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Decision Engine</div>
+                    <a href="optimization.html" class="nav-item"><span class="nav-icon">⚡</span> Optimization</a>
+                    <a href="budget.html" class="nav-item"><span class="nav-icon">💰</span> Budget Allocation</a>
+                    <a href="scenarios.html" class="nav-item"><span class="nav-icon">🔮</span> Scenario Simulator</a>
+                    <a href="recommendations.html" class="nav-item"><span class="nav-icon">✍️</span> Human Review</a>
+                    <a href="rag.html" class="nav-item"><span class="nav-icon">📚</span> RAG Explorer</a>
+                    <a href="reports.html" class="nav-item active"><span class="nav-icon">📋</span> Executive Brief</a>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn btn-ghost btn-sm" onclick="toggleTheme()" style="width:100%; display:flex; justify-content:center; gap:8px;">
+                    <span class="theme-toggle">☀️</span> Toggle Theme
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px;">
+                <div>
+                    <h1 style="font-size:26px; font-weight:800; color:var(--text-heading); margin-bottom:4px;">
+                        📋 Executive Strategic Briefing & Report
+                    </h1>
+                    <p style="color:var(--text-secondary); font-size:14px;">
+                        Publication-grade synthesis compiling quantitative baseline KPIs, customer feedback themes, funnel bottlenecks, and 30-day action plans.
+                    </p>
+                </div>
+                <div style="display:flex; gap:10px;">
+                    <button class="btn btn-secondary btn-sm" onclick="printReportFrame()">🖨️ Print / Save as PDF</button>
+                    <a id="download-report-btn" href="/api/reports/MP-2026-000001" target="_blank" class="btn btn-primary btn-sm">🔗 Open Full Report</a>
+                </div>
+            </div>
+
+            <!-- Report Live Frame -->
+            <div class="card" style="padding:12px;">
+                <iframe id="report-iframe" class="report-frame" src="/api/reports/MP-2026-000001"></iframe>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const params = new URLSearchParams(window.location.search);
+            let jobId = params.get('job_id') || localStorage.getItem('mp-current-job');
+
+            if (!jobId) {
+                try {
+                    const resp = await fetch('/api/jobs/latest');
+                    if (resp.ok) {
+                        const j = await resp.json();
+                        jobId = j.job_id;
+                    }
+                } catch (e) {}
+            }
+
+            jobId = jobId || 'MP-2026-000001';
+            const iframe = document.getElementById('report-iframe');
+            const dlBtn = document.getElementById('download-report-btn');
+            if (iframe) iframe.src = `/api/reports/${jobId}`;
+            if (dlBtn) dlBtn.href = `/api/reports/${jobId}`;
+        });
+
+        function printReportFrame() {
+            const iframe = document.getElementById('report-iframe');
+            if (iframe && iframe.contentWindow) {
+                iframe.contentWindow.focus();
+                iframe.contentWindow.print();
+            } else {
+                window.print();
+            }
+        }
+    </script>
+</body>
+</html>

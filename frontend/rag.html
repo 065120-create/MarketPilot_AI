@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketPilot AI — RAG Knowledge Base Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .rag-result-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-bottom: 16px;
+            transition: var(--transition);
+        }
+        .rag-result-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        .framework-chip {
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+        .framework-chip:hover {
+            border-color: var(--accent);
+            color: var(--text-primary);
+            background: rgba(67, 97, 238, 0.08);
+        }
+    </style>
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span style="font-size: 1.7rem;">✈️</span>
+                <div>
+                    <div class="sidebar-logo">MarketPilot AI</div>
+                    <div class="sidebar-subtitle">Agentic Automation</div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Core Operations</div>
+                    <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span> Home</a>
+                    <a href="dashboard.html" class="nav-item"><span class="nav-icon">📊</span> Dashboard</a>
+                    <a href="campaign.html" class="nav-item"><span class="nav-icon">🎯</span> New Campaign</a>
+                    <a href="upload.html" class="nav-item"><span class="nav-icon">📤</span> Upload Data</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Swarm Observability</div>
+                    <a href="agents.html" class="nav-item"><span class="nav-icon">🤖</span> Agent Swarm</a>
+                    <a href="insights.html" class="nav-item"><span class="nav-icon">💡</span> Customer Voice</a>
+                    <a href="segments.html" class="nav-item"><span class="nav-icon">👥</span> Segmentation</a>
+                    <a href="journey.html" class="nav-item"><span class="nav-icon">🔄</span> Journey Funnel</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Decision Engine</div>
+                    <a href="optimization.html" class="nav-item"><span class="nav-icon">⚡</span> Optimization</a>
+                    <a href="budget.html" class="nav-item"><span class="nav-icon">💰</span> Budget Allocation</a>
+                    <a href="scenarios.html" class="nav-item"><span class="nav-icon">🔮</span> Scenario Simulator</a>
+                    <a href="recommendations.html" class="nav-item"><span class="nav-icon">✍️</span> Human Review</a>
+                    <a href="rag.html" class="nav-item active"><span class="nav-icon">📚</span> RAG Explorer</a>
+                    <a href="reports.html" class="nav-item"><span class="nav-icon">📋</span> Executive Brief</a>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn btn-ghost btn-sm" onclick="toggleTheme()" style="width:100%; display:flex; justify-content:center; gap:8px;">
+                    <span class="theme-toggle">☀️</span> Toggle Theme
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div style="margin-bottom: 24px;">
+                <h1 style="font-size:26px; font-weight:800; color:var(--text-heading); margin-bottom:4px;">
+                    📚 Autonomous RAG Knowledge Base Explorer
+                </h1>
+                <p style="color:var(--text-secondary); font-size:14px;">
+                    Inspect the marketing knowledge base queried by agents. Semantic retrieval grounds optimization recommendations in authoritative frameworks.
+                </p>
+            </div>
+
+            <!-- Search Bar Card -->
+            <div class="card" style="margin-bottom: 24px;">
+                <div style="display:flex; gap:12px;">
+                    <input type="text" class="form-control" id="rag-search-input" placeholder="Query marketing knowledge (e.g. 'How to calculate marginal returns on budget reallocation?')" value="budget allocation optimization framework" style="font-size:15px; padding:12px 16px;">
+                    <button class="btn btn-primary" onclick="executeRAGSearch()" style="min-width:140px;">🔍 Search Vector DB</button>
+                </div>
+                
+                <div style="display:flex; align-items:center; gap:8px; margin-top:14px; flex-wrap:wrap;">
+                    <span style="font-size:12px; color:var(--text-muted); font-weight:700;">Suggested Queries:</span>
+                    <button class="btn btn-ghost btn-sm" onclick="setQuery('budget allocation optimization framework')">💰 Budget Allocation</button>
+                    <button class="btn btn-ghost btn-sm" onclick="setQuery('customer journey dropoff conversion bottlenecks')">🔄 Journey Drop-offs</button>
+                    <button class="btn btn-ghost btn-sm" onclick="setQuery('RFM customer segmentation benchmarks')">👥 RFM Segmentation</button>
+                    <button class="btn btn-ghost btn-sm" onclick="setQuery('A/B testing campaign optimization frameworks')">⚡ A/B Testing Best Practices</button>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <!-- Left: Search Results -->
+                <div>
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+                        <h3 style="font-size:18px; font-weight:700;">Matched Knowledge Chunks</h3>
+                        <span class="badge badge-info" id="rag-results-count">5 Chunks Retrieved</span>
+                    </div>
+
+                    <div id="rag-results-container">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+
+                <!-- Right: Indexed Frameworks in Knowledge Base -->
+                <div>
+                    <div class="card" style="margin-bottom:24px;">
+                        <div class="card-header">
+                            <h3 style="font-size:16px; font-weight:700;">📑 10 Indexed Marketing Frameworks</h3>
+                        </div>
+                        <div style="display:flex; flex-direction:column; gap:8px;">
+                            <div class="framework-chip" onclick="setQuery('marketing_kpi_framework.md')">
+                                📊 <strong>1. Marketing KPI Framework</strong> &bull; CTR, CPC, CPA, ROAS benchmarks
+                            </div>
+                            <div class="framework-chip" onclick="setQuery('campaign_optimization_framework.md')">
+                                ⚡ <strong>2. Campaign Optimization Framework</strong> &bull; Creative & audience testing
+                            </div>
+                            <div class="framework-chip" onclick="setQuery('customer_segmentation_framework.md')">
+                                👥 <strong>3. Customer Segmentation Framework</strong> &bull; RFM & K-Means clustering
+                            </div>
+                            <div class="framework-chip" onclick="setQuery('customer_journey_framework.md')">
+                                🔄 <strong>4. Customer Journey Framework</strong> &bull; AIDA & funnel drop-off mitigation
+                            </div>
+                            <div class="framework-chip" onclick="setQuery('marketing_budget_allocation_framework.md')">
+                                💰 <strong>5. Budget Allocation Framework</strong> &bull; Marginal returns & convex modeling
+                            </div>
+                            <div class="framework-chip" onclick="setQuery('content_strategy_framework.md')">
+                                ✍️ <strong>6. Content Strategy Framework</strong> &bull; Creative pillars & CTA optimization
+                            </div>
+                            <div class="framework-chip" onclick="setQuery('marketing_governance_framework.md')">
+                                🛡️ <strong>7. Marketing Governance Framework</strong> &bull; Compliance & constraint audit
+                            </div>
+                            <div class="framework-chip" onclick="setQuery('customer_retention_framework.md')">
+                                🔁 <strong>8. Customer Retention Framework</strong> &bull; Churn prevention & cohort LTV
+                            </div>
+                            <div class="framework-chip" onclick="setQuery('campaign_measurement_framework.md')">
+                                📈 <strong>9. Campaign Measurement Framework</strong> &bull; Attribution & media mix modeling
+                            </div>
+                            <div class="framework-chip" onclick="setQuery('marketing_decision_framework.md')">
+                                🎯 <strong>10. Marketing Decision Framework</strong> &bull; Statistical significance & trade-offs
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Architecture Box -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 style="font-size:16px; font-weight:700;">🧬 Agentic RAG Decision Rule</h3>
+                        </div>
+                        <p style="font-size:13px; color:var(--text-secondary); line-height:1.6;">
+                            Agents do NOT query the vector database blindly on every task. The <strong>Dynamic Orchestrator</strong> determines when external domain knowledge is required (e.g. strategic budget reallocation thresholds or creative benchmarks) and injects only top-ranked chunks with source metadata to prevent hallucinations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            executeRAGSearch();
+        });
+
+        function setQuery(q) {
+            document.getElementById('rag-search-input').value = q;
+            executeRAGSearch();
+        }
+
+        async function executeRAGSearch() {
+            const query = document.getElementById('rag-search-input').value.trim();
+            if (!query) return;
+
+            const container = document.getElementById('rag-results-container');
+            const countBadge = document.getElementById('rag-results-count');
+            container.innerHTML = '<div style="text-align:center; padding:30px;"><div class="spinner"></div>Searching vector store...</div>';
+
+            try {
+                const resp = await fetch('/api/rag/search', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({query: query, top_k: 4})
+                });
+
+                if (resp.ok) {
+                    const data = await resp.json();
+                    renderRAGResults(data.results || []);
+                    if (countBadge) countBadge.textContent = `${(data.results || []).length} Chunks Retrieved`;
+                } else {
+                    renderFallbackRAG(query);
+                }
+            } catch (e) {
+                renderFallbackRAG(query);
+            }
+        }
+
+        function renderRAGResults(results) {
+            const container = document.getElementById('rag-results-container');
+            if (!container) return;
+
+            if (results.length === 0) {
+                container.innerHTML = '<div style="padding:24px; text-align:center; color:var(--text-muted);">No matching chunks found. Try another query.</div>';
+                return;
+            }
+
+            let html = '';
+            results.forEach((r, idx) => {
+                const scorePercent = ((r.score || 0.85) * 100).toFixed(1);
+                html += `
+                <div class="rag-result-card">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                        <div>
+                            <span class="badge badge-purple" style="font-size:11px;">${r.framework || 'Marketing Framework'}</span>
+                            <span style="font-size:12px; color:var(--text-muted); margin-left:8px;">${r.topic || 'Optimization'}</span>
+                        </div>
+                        <span class="badge badge-success">Relevance: ${scorePercent}%</span>
+                    </div>
+                    <div style="font-size:14px; color:var(--text-secondary); line-height:1.6; white-space:pre-line; max-height:180px; overflow-y:auto; background:var(--bg-primary); padding:12px; border-radius:6px; font-family:var(--font-mono); font-size:12px;">
+                        ${r.content}
+                    </div>
+                </div>
+                `;
+            });
+
+            container.innerHTML = html;
+        }
+
+        function renderFallbackRAG(query) {
+            renderRAGResults([
+                {
+                    framework: 'marketing_budget_allocation_framework.md',
+                    topic: 'Marginal Returns Reallocation',
+                    score: 0.94,
+                    content: "# Marketing Budget Allocation Framework\n\n## 3. Marginal Returns & Efficient Frontier Reallocation\nWhen reallocating media capital across channels, prioritize channels where the marginal ROAS exceeds the portfolio weighted average. Never scale a single channel beyond the diminishing returns inflection point (typically >35% portfolio concentration)."
+                },
+                {
+                    framework: 'campaign_optimization_framework.md',
+                    topic: 'Cross-Channel Conversion Benchmarks',
+                    score: 0.88,
+                    content: "# Campaign Optimization Framework\n\n## 2. Channel Performance Optimization\nHigh-intent search channels (Google Ads) should capture bottom-of-funnel conversion demand, while social platforms (Instagram, Snapchat) must focus on top-funnel engagement and user-generated video resonance."
+                }
+            ]);
+        }
+    </script>
+</body>
+</html>

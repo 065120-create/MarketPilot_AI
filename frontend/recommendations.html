@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketPilot AI — Human-in-the-Loop Decision Center & Automation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span style="font-size: 1.7rem;">✈️</span>
+                <div>
+                    <div class="sidebar-logo">MarketPilot AI</div>
+                    <div class="sidebar-subtitle">Agentic Automation</div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Core Operations</div>
+                    <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span> Home</a>
+                    <a href="dashboard.html" class="nav-item"><span class="nav-icon">📊</span> Dashboard</a>
+                    <a href="campaign.html" class="nav-item"><span class="nav-icon">🎯</span> New Campaign</a>
+                    <a href="upload.html" class="nav-item"><span class="nav-icon">📤</span> Upload Data</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Swarm Observability</div>
+                    <a href="agents.html" class="nav-item"><span class="nav-icon">🤖</span> Agent Swarm</a>
+                    <a href="insights.html" class="nav-item"><span class="nav-icon">💡</span> Customer Voice</a>
+                    <a href="segments.html" class="nav-item"><span class="nav-icon">👥</span> Segmentation</a>
+                    <a href="journey.html" class="nav-item"><span class="nav-icon">🔄</span> Journey Funnel</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Decision Engine</div>
+                    <a href="optimization.html" class="nav-item"><span class="nav-icon">⚡</span> Optimization</a>
+                    <a href="budget.html" class="nav-item"><span class="nav-icon">💰</span> Budget Allocation</a>
+                    <a href="scenarios.html" class="nav-item"><span class="nav-icon">🔮</span> Scenario Simulator</a>
+                    <a href="recommendations.html" class="nav-item active"><span class="nav-icon">✍️</span> Human Review</a>
+                    <a href="rag.html" class="nav-item"><span class="nav-icon">📚</span> RAG Explorer</a>
+                    <a href="reports.html" class="nav-item"><span class="nav-icon">📋</span> Executive Brief</a>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn btn-ghost btn-sm" onclick="toggleTheme()" style="width:100%; display:flex; justify-content:center; gap:8px;">
+                    <span class="theme-toggle">☀️</span> Toggle Theme
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px;">
+                <div>
+                    <h1 style="font-size:26px; font-weight:800; color:var(--text-heading); margin-bottom:4px;">
+                        ✍️ Human-in-the-Loop Governance & Automation
+                    </h1>
+                    <p style="color:var(--text-secondary); font-size:14px;">
+                        Enterprise governance gate. Critical recommendations require human approval before triggering downstream n8n Cloud automations.
+                    </p>
+                </div>
+                <div style="display:flex; gap:10px;">
+                    <button class="btn btn-secondary btn-sm" onclick="handleRevisionModal()">✏️ Request Agent Revision</button>
+                    <button class="btn btn-success btn-sm approval-btn" onclick="handleApproveStrategy()">✅ Approve & Dispatch to n8n</button>
+                </div>
+            </div>
+
+            <!-- Automation Integration Status Bar -->
+            <div class="card" style="margin-bottom: 24px; background:linear-gradient(135deg, rgba(6,214,160,0.08), rgba(67,97,238,0.08));">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <div style="display:flex; align-items:center; gap:16px;">
+                        <span style="font-size:32px;">🔗</span>
+                        <div>
+                            <strong style="color:var(--text-heading);">Downstream Automation Target: n8n Cloud</strong>
+                            <div style="font-size:13px; color:var(--text-secondary);">
+                                Upon approval: Appends insights to Google Sheets &bull; Archives report to Google Drive &bull; Dispatches executive email summary.
+                            </div>
+                        </div>
+                    </div>
+                    <span class="badge badge-success" id="n8n-webhook-badge">Webhook Ready</span>
+                </div>
+            </div>
+
+            <!-- Strategy Proposal Card -->
+            <div class="card" style="margin-bottom: 24px;">
+                <div class="card-header" style="display:flex; justify-content:space-between; align-items:center;">
+                    <h3 style="font-size:18px; font-weight:800;">Synthesized Strategy Package for Approval</h3>
+                    <span class="badge badge-info" id="rec-confidence-badge">AI Confidence: 91%</span>
+                </div>
+
+                <div style="font-size:15px; color:var(--text-primary); line-height:1.7; margin-bottom:20px;" id="rec-executive-summary">
+                    <strong>Executive Synthesis:</strong><br>
+                    Synthesizing multi-agent campaign insights and strategy directives...
+                </div>
+
+                <h4 style="font-size:15px; margin-bottom:12px; color:var(--text-heading);">Immediate Actionable Directives:</h4>
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px; margin-bottom:24px;" id="rec-action-directives">
+                    <!-- Populated dynamically by recommendations.js -->
+                </div>
+
+                <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--border); padding-top:16px;">
+                    <div style="font-size:13px; color:var(--text-muted);" id="rec-governance-audit">
+                        Governance validation audit: <strong>0 constraints violated &bull; Zero arithmetic drift</strong>
+                    </div>
+                    <div style="display:flex; gap:12px;">
+                        <button class="btn btn-secondary btn-sm" onclick="handleRevisionModal()">✏️ Request Revision</button>
+                        <button class="btn btn-success btn-sm approval-btn" onclick="handleApproveStrategy()">✅ Approve & Trigger n8n Workflow</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Approval Audit Record -->
+            <div class="card" id="approval-audit-card" style="display:none; border-left:5px solid var(--success);">
+                <div class="card-header">
+                    <h3 style="font-size:16px; font-weight:700; color:var(--success);">✅ Strategy Approved & Dispatched</h3>
+                </div>
+                <div style="font-size:13px; color:var(--text-secondary); line-height:1.6;" id="approval-audit-details">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/recommendations.js"></script>
+</body>
+</html>

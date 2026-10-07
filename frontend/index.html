@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketPilot AI - The Future of Marketing</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Landing page specific overrides */
+        body { padding: 0; margin: 0; overflow-x: hidden; }
+        .main-content { margin-left: 0 !important; padding: 0 !important; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 48px; background: var(--bg-primary); border-bottom: 1px solid var(--border); position: fixed; width: 100%; top: 0; z-index: 1000; backdrop-filter: blur(10px); background: rgba(10, 10, 26, 0.8); }
+        .navbar-logo { font-size: 24px; font-weight: 800; background: linear-gradient(135deg, var(--accent), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .navbar-links { display: flex; gap: 24px; align-items: center; }
+        .footer { background: var(--bg-secondary); padding: 48px; text-align: center; border-top: 1px solid var(--border); margin-top: 80px; }
+    </style>
+</head>
+<body data-theme="dark">
+    
+    <nav class="navbar">
+        <div class="navbar-logo">MarketPilot AI</div>
+        <div class="navbar-links">
+            <a href="#features" style="color: var(--text-secondary); font-weight: 500;">Features</a>
+            <a href="#how-it-works" style="color: var(--text-secondary); font-weight: 500;">How it Works</a>
+            <button class="theme-toggle" onclick="toggleTheme()" style="margin-right: 16px;">☀️</button>
+            <a href="dashboard.html" class="btn btn-ghost">Sign In</a>
+            <button class="btn btn-primary" onclick="startDemo()">Start Demo</button>
+        </div>
+    </nav>
+
+    <main class="main-content" style="margin-top: 70px;">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Autonomous Marketing Intelligence<br>Powered by Multi-Agent AI</h1>
+            <p>Deploy a swarm of specialized AI agents to analyze data, simulate scenarios, and optimize your marketing budget with human-in-the-loop oversight.</p>
+            <div style="display: flex; gap: 16px; justify-content: center; margin-top: 32px;">
+                <button class="btn btn-primary btn-lg" onclick="startDemo()">Launch Interactive Demo</button>
+                <a href="dashboard.html" class="btn btn-secondary btn-lg">Go to Dashboard</a>
+            </div>
+            
+            <div style="margin-top: 60px; max-width: 900px; margin-left: auto; margin-right: auto;">
+                <img src="https://via.placeholder.com/900x500/1a1a36/4361ee?text=MarketPilot+Dashboard+Preview" alt="Dashboard Preview" style="width: 100%; border-radius: 12px; border: 1px solid var(--border); box-shadow: var(--shadow-lg);">
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="feature-section">
+            <h2>Enterprise-Grade Capabilities</h2>
+            <div class="grid-3" style="max-width: 1200px; margin: 0 auto;">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <div class="feature-title">Multi-Agent Architecture</div>
+                    <div class="feature-desc">Specialized AI agents working collaboratively to ingest data, analyze sentiment, and formulate strategy without stepping on each other's toes.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <div class="feature-title">RAG Knowledge Base</div>
+                    <div class="feature-desc">Interact securely with your proprietary campaign data and brand guidelines using Retrieval-Augmented Generation for grounded insights.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <div class="feature-title">Data Quality Pipeline</div>
+                    <div class="feature-desc">Automated detection of anomalies, missing values, and formatting errors before analysis even begins. Ensures AI hallucination is minimized.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧪</div>
+                    <div class="feature-title">Scenario Simulator</div>
+                    <div class="feature-desc">Run what-if simulations to see how reallocating budget between channels impacts your estimated ROAS and conversion rates.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <div class="feature-title">Budget Optimizer</div>
+                    <div class="feature-desc">Mathematical models combined with ML predictors to suggest the most mathematically optimal budget distribution for your KPIs.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧑‍💻</div>
+                    <div class="feature-title">Human-in-the-Loop</div>
+                    <div class="feature-desc">Nothing is automated without your approval. Review agent execution traces, request revisions via chat, or approve actions directly.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section id="how-it-works" style="padding: 80px 32px; background: var(--bg-primary);">
+            <h2 style="text-align: center; font-size: 32px; margin-bottom: 48px;">How MarketPilot Works</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                
+                <div style="display: flex; gap: 24px; margin-bottom: 32px;">
+                    <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; flex-shrink: 0;">1</div>
+                    <div>
+                        <h3 style="font-size: 20px; margin-bottom: 8px;">Upload & Sanitize Data</h3>
+                        <p style="color: var(--text-secondary);">Upload your historical campaign performance data. Our Data Quality Agent cleans and normalizes the dataset.</p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 24px; margin-bottom: 32px;">
+                    <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--purple); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; flex-shrink: 0;">2</div>
+                    <div>
+                        <h3 style="font-size: 20px; margin-bottom: 8px;">Multi-Agent Analysis</h3>
+                        <p style="color: var(--text-secondary);">The Supervisor agent orchestrates Analyst and Strategist agents to uncover hidden patterns and ROI opportunities.</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 24px; margin-bottom: 32px;">
+                    <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--success); color: #000; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; flex-shrink: 0;">3</div>
+                    <div>
+                        <h3 style="font-size: 20px; margin-bottom: 8px;">Review Recommendations</h3>
+                        <p style="color: var(--text-secondary);">Review the proposed budget allocation on the interactive dashboard. Ask the AI to revise if needed.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="navbar-logo" style="margin-bottom: 16px;">MarketPilot AI</div>
+        <p style="color: var(--text-muted); font-size: 14px;">© 2026 MarketPilot Inc. All rights reserved.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

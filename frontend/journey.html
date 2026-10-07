@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketPilot AI — Customer Journey & Funnel Bottlenecks</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .funnel-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 20px 0;
+        }
+        .funnel-bar-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .funnel-stage-name {
+            width: 170px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-heading);
+            text-align: right;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .funnel-bar-track {
+            flex: 1;
+            height: 36px;
+            background: var(--bg-primary);
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+        }
+        .funnel-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 12px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 13px;
+            transition: width 1s ease-in-out;
+            min-width: 80px;
+        }
+        .funnel-conversion {
+            width: 140px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span style="font-size: 1.7rem;">✈️</span>
+                <div>
+                    <div class="sidebar-logo">MarketPilot AI</div>
+                    <div class="sidebar-subtitle">Agentic Automation</div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Core Operations</div>
+                    <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span> Home</a>
+                    <a href="dashboard.html" class="nav-item"><span class="nav-icon">📊</span> Dashboard</a>
+                    <a href="campaign.html" class="nav-item"><span class="nav-icon">🎯</span> New Campaign</a>
+                    <a href="upload.html" class="nav-item"><span class="nav-icon">📤</span> Upload Data</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Swarm Observability</div>
+                    <a href="agents.html" class="nav-item"><span class="nav-icon">🤖</span> Agent Swarm</a>
+                    <a href="insights.html" class="nav-item"><span class="nav-icon">💡</span> Customer Voice</a>
+                    <a href="segments.html" class="nav-item"><span class="nav-icon">👥</span> Segmentation</a>
+                    <a href="journey.html" class="nav-item active"><span class="nav-icon">🔄</span> Journey Funnel</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Decision Engine</div>
+                    <a href="optimization.html" class="nav-item"><span class="nav-icon">⚡</span> Optimization</a>
+                    <a href="budget.html" class="nav-item"><span class="nav-icon">💰</span> Budget Allocation</a>
+                    <a href="scenarios.html" class="nav-item"><span class="nav-icon">🔮</span> Scenario Simulator</a>
+                    <a href="recommendations.html" class="nav-item"><span class="nav-icon">✍️</span> Human Review</a>
+                    <a href="rag.html" class="nav-item"><span class="nav-icon">📚</span> RAG Explorer</a>
+                    <a href="reports.html" class="nav-item"><span class="nav-icon">📋</span> Executive Brief</a>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn btn-ghost btn-sm" onclick="toggleTheme()" style="width:100%; display:flex; justify-content:center; gap:8px;">
+                    <span class="theme-toggle">☀️</span> Toggle Theme
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div style="margin-bottom: 24px;">
+                <h1 style="font-size:26px; font-weight:800; color:var(--text-heading); margin-bottom:4px;">
+                    🔄 Customer Journey & Sequential Funnel Analysis
+                </h1>
+                <p style="color:var(--text-secondary); font-size:14px;">
+                    Tracks user progression through marketing touchpoints from initial awareness to final retention. Pinpoints high-friction drop-offs.
+                </p>
+            </div>
+
+            <!-- Funnel Visualization Card -->
+            <div class="card" style="margin-bottom: 24px;">
+                <div class="card-header" style="display:flex; justify-content:space-between; align-items:center;">
+                    <h3 style="font-size:16px; font-weight:700;">Customer Funnel Transition Stages</h3>
+                    <span class="badge badge-error" id="funnel-bottleneck-badge">Auditing Funnel Bottlenecks...</span>
+                </div>
+                
+                <div class="funnel-container" id="funnel-bars-container">
+                    <div style="text-align:center; padding:30px; color:var(--text-muted);">
+                        <div class="spinner" style="margin:0 auto 12px auto;"></div>
+                        Loading multi-agent funnel analytics...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deep Bottleneck Breakdown -->
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 style="font-size:16px; font-weight:700;">⚠️ Primary Friction Point Diagnosis</h3>
+                    </div>
+                    <div style="background:rgba(239, 71, 111, 0.08); border-left:4px solid var(--error); padding:16px; border-radius:0 6px 6px 0; margin-bottom:16px;">
+                        <strong style="color:var(--error); font-size:15px;" id="funnel-bottleneck-title">Consideration to Conversion Friction</strong>
+                        <p style="font-size:13px; color:var(--text-secondary); margin-top:6px;" id="funnel-bottleneck-desc">
+                            Analyzing drop-off characteristics across touchpoints...
+                        </p>
+                    </div>
+                    <h4 style="font-size:14px; margin-bottom:8px;">Root Causes Identified by Agent:</h4>
+                    <ul style="padding-left:18px; font-size:13px; color:var(--text-secondary); line-height:1.7;">
+                        <li>Checkout flow latency on mobile devices.</li>
+                        <li>High ad frequency with repetitive creative rather than social proof.</li>
+                        <li>Absence of automated retargeting sequence following drop-off.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 style="font-size:16px; font-weight:700;">💡 Prescriptive Funnel Interventions</h3>
+                    </div>
+                    <div id="funnel-recommendations-list">
+                        <div style="margin-bottom:14px;">
+                            <strong style="color:var(--success); font-size:14px;">1. Frictionless Express Checkout</strong>
+                            <p style="font-size:13px; color:var(--text-secondary); margin-top:2px;">
+                                Deploy 1-click express digital wallets to cut checkout latency.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/journey.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketPilot AI — What-If Scenario Simulator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .slider-group {
+            margin-bottom: 16px;
+        }
+        .slider-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .slider-control {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: var(--bg-input);
+            outline: none;
+            accent-color: var(--accent);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span style="font-size: 1.7rem;">✈️</span>
+                <div>
+                    <div class="sidebar-logo">MarketPilot AI</div>
+                    <div class="sidebar-subtitle">Agentic Automation</div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Core Operations</div>
+                    <a href="index.html" class="nav-item"><span class="nav-icon">🏠</span> Home</a>
+                    <a href="dashboard.html" class="nav-item"><span class="nav-icon">📊</span> Dashboard</a>
+                    <a href="campaign.html" class="nav-item"><span class="nav-icon">🎯</span> New Campaign</a>
+                    <a href="upload.html" class="nav-item"><span class="nav-icon">📤</span> Upload Data</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Swarm Observability</div>
+                    <a href="agents.html" class="nav-item"><span class="nav-icon">🤖</span> Agent Swarm</a>
+                    <a href="insights.html" class="nav-item"><span class="nav-icon">💡</span> Customer Voice</a>
+                    <a href="segments.html" class="nav-item"><span class="nav-icon">👥</span> Segmentation</a>
+                    <a href="journey.html" class="nav-item"><span class="nav-icon">🔄</span> Journey Funnel</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Decision Engine</div>
+                    <a href="optimization.html" class="nav-item"><span class="nav-icon">⚡</span> Optimization</a>
+                    <a href="budget.html" class="nav-item"><span class="nav-icon">💰</span> Budget Allocation</a>
+                    <a href="scenarios.html" class="nav-item active"><span class="nav-icon">🔮</span> Scenario Simulator</a>
+                    <a href="recommendations.html" class="nav-item"><span class="nav-icon">✍️</span> Human Review</a>
+                    <a href="rag.html" class="nav-item"><span class="nav-icon">📚</span> RAG Explorer</a>
+                    <a href="reports.html" class="nav-item"><span class="nav-icon">📋</span> Executive Brief</a>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn btn-ghost btn-sm" onclick="toggleTheme()" style="width:100%; display:flex; justify-content:center; gap:8px;">
+                    <span class="theme-toggle">☀️</span> Toggle Theme
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px;">
+                <div>
+                    <h1 style="font-size:26px; font-weight:800; color:var(--text-heading); margin-bottom:4px;">
+                        🔮 Interactive What-If Scenario Simulator
+                    </h1>
+                    <p style="color:var(--text-secondary); font-size:14px;">
+                        Simulate macro budget shifts, channel reallocation experiments, and see instantaneous comparative revenue and ROAS projections.
+                    </p>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn-sm" onclick="executeSimulation()">⚡ Run Simulation</button>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <!-- Left: Dynamic Sliders & Controls -->
+                <div class="card">
+                    <div class="card-header" style="display:flex; justify-content:space-between; align-items:center;">
+                        <h3 style="font-size:16px; font-weight:700;">Simulated Channel Spend Controls</h3>
+                        <span class="badge badge-info" id="total-allocated-badge">Total: Calculating...</span>
+                    </div>
+
+                    <div id="scenario-sliders-container">
+                        <div style="text-align:center; padding:30px; color:var(--text-muted);">
+                            <div class="spinner" style="margin:0 auto 12px auto;"></div>
+                            Configuring dynamic channel parameters...
+                        </div>
+                    </div>
+
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:20px; padding-top:16px; border-top:1px solid var(--border);">
+                        <button class="btn btn-secondary btn-sm" onclick="resetSliders()">↺ Reset to Recommended</button>
+                        <button class="btn btn-primary btn-sm" onclick="executeSimulation()">Calculate Impact</button>
+                    </div>
+                </div>
+
+                <!-- Right: Comparison Projections -->
+                <div>
+                    <!-- KPI Comparison Cards -->
+                    <div class="grid-2" style="margin-bottom: 20px;">
+                        <div class="card card-metric">
+                            <div class="metric-label">Estimated Revenue</div>
+                            <div class="metric-value" style="color:var(--success);" id="proj-rev">₹0</div>
+                            <div class="metric-change" style="color:var(--success);" id="proj-rev-lift">+₹0 (0.0%)</div>
+                        </div>
+                        <div class="card card-metric">
+                            <div class="metric-label">Projected Blended ROAS</div>
+                            <div class="metric-value" style="color:var(--accent);" id="proj-roas">0.00x</div>
+                            <div class="metric-change" style="color:var(--success);" id="proj-roas-lift">+0.00x vs Baseline</div>
+                        </div>
+                    </div>
+
+                    <!-- Comparison Chart -->
+                    <div class="card" style="margin-bottom: 20px;">
+                        <div class="card-header">
+                            <h3 style="font-size:16px; font-weight:700;">Revenue Projection Comparison</h3>
+                        </div>
+                        <div class="chart-container" style="height:220px;">
+                            <canvas id="scenarioComparisonChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Risk & Governance Verdict -->
+                    <div class="card" id="scenario-verdict-card" style="border-left:5px solid var(--success);">
+                        <div style="font-weight:700; color:var(--text-heading); margin-bottom:4px;" id="verdict-title">
+                            ✅ Scenario Approved by Governance Engine
+                        </div>
+                        <div style="font-size:13px; color:var(--text-secondary); line-height:1.5;" id="verdict-desc">
+                            The simulated distribution maintains safe portfolio diversification. Single-channel concentration is capped under 35%, ensuring risk-adjusted maximum ROAS.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/scenarios.js"></script>
+</body>
+</html>
